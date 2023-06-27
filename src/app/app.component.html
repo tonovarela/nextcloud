@@ -1,18 +1,22 @@
-<div class="flex wrapper">
-    <!--sidenav-->
-    <app-sidebar></app-sidebar>
-    <!-- ============================================================== -->
-    <!-- Start Page Content here -->
-    <!-- ============================================================== -->
-    <div class="page-content">
-        <app-header></app-header>
-        <main class="flex-grow p-6">
-            <router-outlet></router-outlet>
-        </main>
-        <app-footer></app-footer>
-
+<div class="nk-app-root">
+    <div class="nk-apps-sidebar is-dark">
+        <app-sidebar tipo="web"></app-sidebar>
     </div>
-    <!-- ============================================================== -->
-    <!-- End Page content -->
-    <!-- ============================================================== -->
+    <!-- main @s -->
+    <div class="nk-main ">
+        <!-- wrap @s -->
+        <div class="nk-wrap ">
+            <!-- main header @s -->
+            <div class="nk-header nk-header-fixed is-light">
+               <app-header></app-header>
+            </div>
+            <!-- main header @e -->
+            <div class="nk-sidebar" data-content="sidebarMenu">
+                <app-sidebar tipo="mobile"></app-sidebar>
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+        <!-- wrap @e -->
+    </div>
+    <!-- main @e -->
 </div>

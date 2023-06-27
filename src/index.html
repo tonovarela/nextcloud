@@ -1,446 +1,689 @@
+
 <!DOCTYPE html>
+<html lang="zxx" class="js">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="./images/favicon.png">
+    <!-- Page Title  -->
+    <title>NextCloud | Litoprocess</title>
+    <!-- StyleSheets  -->
+    <link rel="stylesheet" href="assets/css/dashlite.css?ver=3.2.0">
+    <link id="skin-default" rel="stylesheet" href="assets/css/theme.css?ver=3.2.0">
+</head>
+
+<body class="nk-body npc-apps apps-only has-apps-sidebar npc-apps-files">
+   <app-root></app-root>
+    <!-- app-root @e -->
+    <!-- select region modal -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="region">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <a href="#" class="close" data-bs-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
+                <div class="modal-body modal-body-md">
+                    <h5 class="title mb-4">Select Your Country</h5>
+                    <div class="nk-country-region">
+                        <ul class="country-list text-center gy-2">
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/arg.png" alt="" class="country-flag">
+                                    <span class="country-name">Argentina</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/aus.png" alt="" class="country-flag">
+                                    <span class="country-name">Australia</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/bangladesh.png" alt="" class="country-flag">
+                                    <span class="country-name">Bangladesh</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/canada.png" alt="" class="country-flag">
+                                    <span class="country-name">Canada <small>(English)</small></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/china.png" alt="" class="country-flag">
+                                    <span class="country-name">Centrafricaine</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/china.png" alt="" class="country-flag">
+                                    <span class="country-name">China</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/french.png" alt="" class="country-flag">
+                                    <span class="country-name">France</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/germany.png" alt="" class="country-flag">
+                                    <span class="country-name">Germany</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/iran.png" alt="" class="country-flag">
+                                    <span class="country-name">Iran</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/italy.png" alt="" class="country-flag">
+                                    <span class="country-name">Italy</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/mexico.png" alt="" class="country-flag">
+                                    <span class="country-name">México</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/philipine.png" alt="" class="country-flag">
+                                    <span class="country-name">Philippines</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/portugal.png" alt="" class="country-flag">
+                                    <span class="country-name">Portugal</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/s-africa.png" alt="" class="country-flag">
+                                    <span class="country-name">South Africa</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/spanish.png" alt="" class="country-flag">
+                                    <span class="country-name">Spain</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/switzerland.png" alt="" class="country-flag">
+                                    <span class="country-name">Switzerland</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/uk.png" alt="" class="country-flag">
+                                    <span class="country-name">United Kingdom</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/english.png" alt="" class="country-flag">
+                                    <span class="country-name">United State</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- .modal-content -->
+        </div><!-- .modla-dialog -->
+    </div><!-- .modal -->
+    <!-- @@ Share File Modal @e -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="file-share">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header align-center">
+                    <div class="nk-file-title">
+                        <div class="nk-file-icon">
+                            <span class="nk-file-icon-type">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72 72">
+                                    <path fill="#6C87FE" d="M57.5,31h-23c-1.4,0-2.5-1.1-2.5-2.5v-10c0-1.4,1.1-2.5,2.5-2.5h23c1.4,0,2.5,1.1,2.5,2.5v10
+	C60,29.9,58.9,31,57.5,31z" />
+                                    <path fill="#8AA3FF" d="M59.8,61H12.2C8.8,61,6,58,6,54.4V17.6C6,14,8.8,11,12.2,11h18.5c1.7,0,3.3,1,4.1,2.6L38,24h21.8
+	c3.4,0,6.2,2.4,6.2,6v24.4C66,58,63.2,61,59.8,61z" />
+                                    <path display="none" fill="#8AA3FF" d="M62.1,61H9.9C7.8,61,6,59.2,6,57c0,0,0-31.5,0-42c0-2.2,1.8-4,3.9-4h19.3
+	c1.6,0,3.2,0.2,3.9,2.3l2.7,6.8c0.5,1.1,1.6,1.9,2.8,1.9h23.5c2.2,0,3.9,1.8,3.9,4v31C66,59.2,64.2,61,62.1,61z" />
+                                    <path fill="#798BFF" d="M7.7,59c2.2,2.4,4.7,2,6.3,2h45c1.1,0,3.2,0.1,5.3-2H7.7z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="nk-file-name">
+                            <div class="nk-file-name-text"><span class="title">UI/UX Design</span></div>
+                            <div class="nk-file-name-sub">394.87 MB</div>
+                        </div>
+                    </div>
+                    <a href="#" class="close" data-bs-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="nk-file-share-header">
+                        <div class="nk-file-share-group">
+                            <div class="nk-file-share-input-group">
+                                <div class="nk-file-share-input nk-file-share-input-to">
+                                    <label class="label">To</label>
+                                    <input type="text" class="input-mail tagify" placeholder="Email or Name" data-whitelist="team@softnio.com, help@softnio.com, contact@softnio.com">
+                                </div>
+                            </div>
+                            <ul class="nk-file-share-nav">
+                                <li><span class="badge badge-sm bg-outline-gray">Can View</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nk-file-share-editor">
+                        <div class="nk-file-share-field">
+                            <textarea class="form-control form-control-simple no-resize ex-large" placeholder="Add a Message (optional)"></textarea>
+                        </div>
+                    </div><!-- .nk-file-share-editor -->
+                </div><!-- .modal-body -->
+                <div class="modal-footer bg-light">
+                    <ul class="btn-toolbar g-3">
+                        <li><a href="#" data-bs-dismiss="modal" class="btn btn-outline-light btn-white">Cancel</a></li>
+                        <li><a href="#" class="btn btn-primary">Share</a></li>
+                    </ul>
+                </div><!-- .modal-footer -->
+            </div><!-- .modal-content -->
+        </div><!-- .modla-dialog -->
+    </div><!-- .modal -->
+    <!-- @@ Copy File Modal @e -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="file-copy">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header align-center border-bottom-0">
+                    <h5 class="modal-title">Copy item to...</h5>
+                    <a href="#" class="close" data-bs-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
+                </div>
+                <div class="modal-body pt-0 mt-n2">
+                    <ul class="breadcrumb breadcrumb-alt breadcrumb-xs breadcrumb-arrow mb-1">
+                        <li class="breadcrumb-item">Project</li>
+                        <li class="breadcrumb-item">Apps</li>
+                    </ul>
+                    <div class="nk-fmg-listing is-scrollable">
+                        <div class="nk-files nk-files-view-list is-compact">
+                            <div class="nk-files-list">
+                                <div class="nk-file-item nk-file">
+                                    <div class="nk-file-info">
+                                        <a class="nk-file-link" href="#">
+                                            <div class="nk-file-title">
+                                                <div class="nk-file-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72 72">
+                                                        <path fill="#6C87FE" d="M57.5,31h-23c-1.4,0-2.5-1.1-2.5-2.5v-10c0-1.4,1.1-2.5,2.5-2.5h23c1.4,0,2.5,1.1,2.5,2.5v10
+	C60,29.9,58.9,31,57.5,31z" />
+                                                        <path fill="#8AA3FF" d="M59.8,61H12.2C8.8,61,6,58,6,54.4V17.6C6,14,8.8,11,12.2,11h18.5c1.7,0,3.3,1,4.1,2.6L38,24h21.8
+	c3.4,0,6.2,2.4,6.2,6v24.4C66,58,63.2,61,59.8,61z" />
+                                                        <path display="none" fill="#8AA3FF" d="M62.1,61H9.9C7.8,61,6,59.2,6,57c0,0,0-31.5,0-42c0-2.2,1.8-4,3.9-4h19.3
+	c1.6,0,3.2,0.2,3.9,2.3l2.7,6.8c0.5,1.1,1.6,1.9,2.8,1.9h23.5c2.2,0,3.9,1.8,3.9,4v31C66,59.2,64.2,61,62.1,61z" />
+                                                        <path fill="#798BFF" d="M7.7,59c2.2,2.4,4.7,2,6.3,2h45c1.1,0,3.2,0.1,5.3-2H7.7z" />
+                                                    </svg>
+                                                </div>
+                                                <div class="nk-file-name">
+                                                    <div class="nk-file-name-text">
+                                                        <span class="title">UI/UX Design</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nk-file-actions">
+                                        <a href="#" class="btn btn-sm btn-icon btn-trigger"><em class="icon ni ni-chevron-right"></em></a>
+                                    </div>
+                                </div><!-- .nk-file -->
+                                <div class="nk-file-item nk-file selected">
+                                    <div class="nk-file-info">
+                                        <a class="nk-file-link" href="#">
+                                            <div class="nk-file-title">
+                                                <div class="nk-file-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72 72">
+                                                        <path fill="#6C87FE" d="M57.5,31h-23c-1.4,0-2.5-1.1-2.5-2.5v-10c0-1.4,1.1-2.5,2.5-2.5h23c1.4,0,2.5,1.1,2.5,2.5v10
+	C60,29.9,58.9,31,57.5,31z" />
+                                                        <path fill="#8AA3FF" d="M59.8,61H12.2C8.8,61,6,58,6,54.4V17.6C6,14,8.8,11,12.2,11h18.5c1.7,0,3.3,1,4.1,2.6L38,24h21.8
+	c3.4,0,6.2,2.4,6.2,6v24.4C66,58,63.2,61,59.8,61z" />
+                                                        <path display="none" fill="#8AA3FF" d="M62.1,61H9.9C7.8,61,6,59.2,6,57c0,0,0-31.5,0-42c0-2.2,1.8-4,3.9-4h19.3
+	c1.6,0,3.2,0.2,3.9,2.3l2.7,6.8c0.5,1.1,1.6,1.9,2.8,1.9h23.5c2.2,0,3.9,1.8,3.9,4v31C66,59.2,64.2,61,62.1,61z" />
+                                                        <path fill="#798BFF" d="M7.7,59c2.2,2.4,4.7,2,6.3,2h45c1.1,0,3.2,0.1,5.3-2H7.7z" />
+                                                    </svg>
+                                                </div>
+                                                <div class="nk-file-name">
+                                                    <div class="nk-file-name-text">
+                                                        <span class="title">UI Design</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nk-file-actions">
+                                        <a href="#" class="btn btn-sm btn-icon btn-trigger"><em class="icon ni ni-chevron-right"></em></a>
+                                    </div>
+                                </div><!-- .nk-file -->
+                                <div class="nk-file-item nk-file">
+                                    <div class="nk-file-info">
+                                        <a class="nk-file-link" href="#">
+                                            <div class="nk-file-title">
+                                                <div class="nk-file-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+                                                        <g>
+                                                            <rect x="32" y="16" width="28" height="15" rx="2.5" ry="2.5" style="fill:#6c87fe" />
+                                                            <path d="M59.7778,61H12.2222A6.4215,6.4215,0,0,1,6,54.3962V17.6038A6.4215,6.4215,0,0,1,12.2222,11H30.6977a4.6714,4.6714,0,0,1,4.1128,2.5644L38,24H59.7778A5.91,5.91,0,0,1,66,30V54.3962A6.4215,6.4215,0,0,1,59.7778,61Z" style="fill:#8aa3ff" />
+                                                            <path d="M7.7454,58.9807C9.9352,61.3864,12.4882,61.0163,14,61H59a6.3373,6.3373,0,0,0,5.2562-2.0193Z" style="fill:#798bff" />
+                                                            <path d="M29.6309,37.36a3.0236,3.0236,0,0,1-.86-2.39A4.3748,4.3748,0,0,1,32.9961,31h.0078a4.36,4.36,0,0,1,4.22,3.9121,3.0532,3.0532,0,0,1-.8545,2.4482A4.4158,4.4158,0,0,1,33.23,38.53c-.0771,0-.1533-.002-.23-.0049A4.519,4.519,0,0,1,29.6309,37.36Zm13.8359,2.7549a1,1,0,1,0-.9336,1.77c.7207.38,1.4658,2.126,1.4668,4.39V48a1,1,0,0,0,2,0V46.2744C45.999,43.3447,45.0049,40.9268,43.4668,40.1152ZM40.165,37.3965c-.1445.084-.29.168-.4316.2549a1,1,0,0,0,.5215,1.8535.9887.9887,0,0,0,.52-.1465c.1289-.0781.2607-.1543.3916-.23a4.2311,4.2311,0,0,0,2.1465-2.124.9839.9839,0,0,0,.0313-.1045A3.8411,3.8411,0,0,0,40.5,32.5352a1,1,0,0,0-.4922,1.9395,1.8773,1.8773,0,0,1,1.4,1.9092A2.835,2.835,0,0,1,40.165,37.3965ZM36.5,41h-7c-2.5234,0-4.5,2.7822-4.5,6.333V48.5a.8355.8355,0,0,0,.0588.2914.9731.9731,0,0,0,.3508.4946C26.4646,50.2812,29.4614,51,33,51s6.5353-.7187,7.59-1.7139a.9726.9726,0,0,0,.3509-.4949A.8361.8361,0,0,0,41,48.5V47.333C41,43.7822,39.0234,41,36.5,41Z" style="fill:#4b66bc" />
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div class="nk-file-name">
+                                                    <div class="nk-file-name-text">
+                                                        <span class="title">Projects</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nk-file-actions">
+                                        <a href="#" class="btn btn-sm btn-icon btn-trigger"><em class="icon ni ni-chevron-right"></em></a>
+                                    </div>
+                                </div><!-- .nk-file -->
+                                <div class="nk-file-item nk-file">
+                                    <div class="nk-file-info">
+                                        <a class="nk-file-link" href="#">
+                                            <div class="nk-file-title">
+                                                <div class="nk-file-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72 72">
+                                                        <path fill="#6C87FE" d="M57.5,31h-23c-1.4,0-2.5-1.1-2.5-2.5v-10c0-1.4,1.1-2.5,2.5-2.5h23c1.4,0,2.5,1.1,2.5,2.5v10
+	C60,29.9,58.9,31,57.5,31z" />
+                                                        <path fill="#8AA3FF" d="M59.8,61H12.2C8.8,61,6,58,6,54.4V17.6C6,14,8.8,11,12.2,11h18.5c1.7,0,3.3,1,4.1,2.6L38,24h21.8
+	c3.4,0,6.2,2.4,6.2,6v24.4C66,58,63.2,61,59.8,61z" />
+                                                        <path display="none" fill="#8AA3FF" d="M62.1,61H9.9C7.8,61,6,59.2,6,57c0,0,0-31.5,0-42c0-2.2,1.8-4,3.9-4h19.3
+	c1.6,0,3.2,0.2,3.9,2.3l2.7,6.8c0.5,1.1,1.6,1.9,2.8,1.9h23.5c2.2,0,3.9,1.8,3.9,4v31C66,59.2,64.2,61,62.1,61z" />
+                                                        <path fill="#798BFF" d="M7.7,59c2.2,2.4,4.7,2,6.3,2h45c1.1,0,3.2,0.1,5.3-2H7.7z" />
+                                                    </svg>
+                                                </div>
+                                                <div class="nk-file-name">
+                                                    <div class="nk-file-name-text">
+                                                        <span class="title">2019 Project</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nk-file-actions">
+                                        <a href="#" class="btn btn-sm btn-icon btn-trigger"><em class="icon ni ni-chevron-right"></em></a>
+                                    </div>
+                                </div><!-- .nk-file -->
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .modal-body -->
+                <div class="modal-footer modal-footer-stretch  bg-light">
+                    <div class="modal-footer-between">
+                        <div class="g">
+                            <a href="#" class="link link-primary">Create New Folder</a>
+                        </div>
+                        <div class="g">
+                            <ul class="btn-toolbar g-3">
+                                <li><a href="#" data-bs-dismiss="modal" class="btn btn-outline-light btn-white">Cancel</a></li>
+                                <li><a href="#" class="btn btn-primary">Copy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .modal-footer -->
+            </div><!-- .modal-content -->
+        </div><!-- .modla-dialog -->
+    </div><!-- .modal -->
+    <!-- @@ Move File Modal @e -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="file-move">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header align-center border-bottom-0">
+                    <h5 class="modal-title">Move item to...</h5>
+                    <a href="#" class="close" data-bs-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
+                </div>
+                <div class="modal-body pt-0 mt-n2">
+                    <ul class="breadcrumb breadcrumb-alt breadcrumb-xs breadcrumb-arrow mb-1">
+                        <li class="breadcrumb-item">Project</li>
+                        <li class="breadcrumb-item">Apps</li>
+                    </ul>
+                    <div class="nk-fmg-listing is-scrollable">
+                        <div class="nk-files nk-files-view-list is-compact">
+                            <div class="nk-files-list">
+                                <div class="nk-file-item nk-file">
+                                    <div class="nk-file-info">
+                                        <a class="nk-file-link" href="#">
+                                            <div class="nk-file-title">
+                                                <div class="nk-file-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72 72">
+                                                        <path fill="#6C87FE" d="M57.5,31h-23c-1.4,0-2.5-1.1-2.5-2.5v-10c0-1.4,1.1-2.5,2.5-2.5h23c1.4,0,2.5,1.1,2.5,2.5v10
+	C60,29.9,58.9,31,57.5,31z" />
+                                                        <path fill="#8AA3FF" d="M59.8,61H12.2C8.8,61,6,58,6,54.4V17.6C6,14,8.8,11,12.2,11h18.5c1.7,0,3.3,1,4.1,2.6L38,24h21.8
+	c3.4,0,6.2,2.4,6.2,6v24.4C66,58,63.2,61,59.8,61z" />
+                                                        <path display="none" fill="#8AA3FF" d="M62.1,61H9.9C7.8,61,6,59.2,6,57c0,0,0-31.5,0-42c0-2.2,1.8-4,3.9-4h19.3
+	c1.6,0,3.2,0.2,3.9,2.3l2.7,6.8c0.5,1.1,1.6,1.9,2.8,1.9h23.5c2.2,0,3.9,1.8,3.9,4v31C66,59.2,64.2,61,62.1,61z" />
+                                                        <path fill="#798BFF" d="M7.7,59c2.2,2.4,4.7,2,6.3,2h45c1.1,0,3.2,0.1,5.3-2H7.7z" />
+                                                    </svg>
+                                                </div>
+                                                <div class="nk-file-name">
+                                                    <div class="nk-file-name-text">
+                                                        <span class="title">UI/UX Design</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nk-file-actions">
+                                        <a href="#" class="btn btn-sm btn-icon btn-trigger"><em class="icon ni ni-chevron-right"></em></a>
+                                    </div>
+                                </div><!-- .nk-file -->
+                                <div class="nk-file-item nk-file">
+                                    <div class="nk-file-info">
+                                        <a class="nk-file-link" href="#">
+                                            <div class="nk-file-title">
+                                                <div class="nk-file-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72 72">
+                                                        <path fill="#6C87FE" d="M57.5,31h-23c-1.4,0-2.5-1.1-2.5-2.5v-10c0-1.4,1.1-2.5,2.5-2.5h23c1.4,0,2.5,1.1,2.5,2.5v10
+	C60,29.9,58.9,31,57.5,31z" />
+                                                        <path fill="#8AA3FF" d="M59.8,61H12.2C8.8,61,6,58,6,54.4V17.6C6,14,8.8,11,12.2,11h18.5c1.7,0,3.3,1,4.1,2.6L38,24h21.8
+	c3.4,0,6.2,2.4,6.2,6v24.4C66,58,63.2,61,59.8,61z" />
+                                                        <path display="none" fill="#8AA3FF" d="M62.1,61H9.9C7.8,61,6,59.2,6,57c0,0,0-31.5,0-42c0-2.2,1.8-4,3.9-4h19.3
+	c1.6,0,3.2,0.2,3.9,2.3l2.7,6.8c0.5,1.1,1.6,1.9,2.8,1.9h23.5c2.2,0,3.9,1.8,3.9,4v31C66,59.2,64.2,61,62.1,61z" />
+                                                        <path fill="#798BFF" d="M7.7,59c2.2,2.4,4.7,2,6.3,2h45c1.1,0,3.2,0.1,5.3-2H7.7z" />
+                                                    </svg>
+                                                </div>
+                                                <div class="nk-file-name">
+                                                    <div class="nk-file-name-text">
+                                                        <span class="title">2019 Project</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nk-file-actions">
+                                        <a href="#" class="btn btn-sm btn-icon btn-trigger"><em class="icon ni ni-chevron-right"></em></a>
+                                    </div>
+                                </div><!-- .nk-file -->
+                                <div class="nk-file-item nk-file selected">
+                                    <div class="nk-file-info">
+                                        <a class="nk-file-link" href="#">
+                                            <div class="nk-file-title">
+                                                <div class="nk-file-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+                                                        <g>
+                                                            <rect x="32" y="16" width="28" height="15" rx="2.5" ry="2.5" style="fill:#6c87fe" />
+                                                            <path d="M59.7778,61H12.2222A6.4215,6.4215,0,0,1,6,54.3962V17.6038A6.4215,6.4215,0,0,1,12.2222,11H30.6977a4.6714,4.6714,0,0,1,4.1128,2.5644L38,24H59.7778A5.91,5.91,0,0,1,66,30V54.3962A6.4215,6.4215,0,0,1,59.7778,61Z" style="fill:#8aa3ff" />
+                                                            <path d="M7.7454,58.9807C9.9352,61.3864,12.4882,61.0163,14,61H59a6.3373,6.3373,0,0,0,5.2562-2.0193Z" style="fill:#798bff" />
+                                                            <path d="M29.6309,37.36a3.0236,3.0236,0,0,1-.86-2.39A4.3748,4.3748,0,0,1,32.9961,31h.0078a4.36,4.36,0,0,1,4.22,3.9121,3.0532,3.0532,0,0,1-.8545,2.4482A4.4158,4.4158,0,0,1,33.23,38.53c-.0771,0-.1533-.002-.23-.0049A4.519,4.519,0,0,1,29.6309,37.36Zm13.8359,2.7549a1,1,0,1,0-.9336,1.77c.7207.38,1.4658,2.126,1.4668,4.39V48a1,1,0,0,0,2,0V46.2744C45.999,43.3447,45.0049,40.9268,43.4668,40.1152ZM40.165,37.3965c-.1445.084-.29.168-.4316.2549a1,1,0,0,0,.5215,1.8535.9887.9887,0,0,0,.52-.1465c.1289-.0781.2607-.1543.3916-.23a4.2311,4.2311,0,0,0,2.1465-2.124.9839.9839,0,0,0,.0313-.1045A3.8411,3.8411,0,0,0,40.5,32.5352a1,1,0,0,0-.4922,1.9395,1.8773,1.8773,0,0,1,1.4,1.9092A2.835,2.835,0,0,1,40.165,37.3965ZM36.5,41h-7c-2.5234,0-4.5,2.7822-4.5,6.333V48.5a.8355.8355,0,0,0,.0588.2914.9731.9731,0,0,0,.3508.4946C26.4646,50.2812,29.4614,51,33,51s6.5353-.7187,7.59-1.7139a.9726.9726,0,0,0,.3509-.4949A.8361.8361,0,0,0,41,48.5V47.333C41,43.7822,39.0234,41,36.5,41Z" style="fill:#4b66bc" />
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div class="nk-file-name">
+                                                    <div class="nk-file-name-text">
+                                                        <span class="title">Projects</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nk-file-actions">
+                                        <a href="#" class="btn btn-sm btn-icon btn-trigger"><em class="icon ni ni-chevron-right"></em></a>
+                                    </div>
+                                </div><!-- .nk-file -->
+                                <div class="nk-file-item nk-file">
+                                    <div class="nk-file-info">
+                                        <a class="nk-file-link" href="#">
+                                            <div class="nk-file-title">
+                                                <div class="nk-file-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72 72">
+                                                        <path fill="#6C87FE" d="M57.5,31h-23c-1.4,0-2.5-1.1-2.5-2.5v-10c0-1.4,1.1-2.5,2.5-2.5h23c1.4,0,2.5,1.1,2.5,2.5v10
+	C60,29.9,58.9,31,57.5,31z" />
+                                                        <path fill="#8AA3FF" d="M59.8,61H12.2C8.8,61,6,58,6,54.4V17.6C6,14,8.8,11,12.2,11h18.5c1.7,0,3.3,1,4.1,2.6L38,24h21.8
+	c3.4,0,6.2,2.4,6.2,6v24.4C66,58,63.2,61,59.8,61z" />
+                                                        <path display="none" fill="#8AA3FF" d="M62.1,61H9.9C7.8,61,6,59.2,6,57c0,0,0-31.5,0-42c0-2.2,1.8-4,3.9-4h19.3
+	c1.6,0,3.2,0.2,3.9,2.3l2.7,6.8c0.5,1.1,1.6,1.9,2.8,1.9h23.5c2.2,0,3.9,1.8,3.9,4v31C66,59.2,64.2,61,62.1,61z" />
+                                                        <path fill="#798BFF" d="M7.7,59c2.2,2.4,4.7,2,6.3,2h45c1.1,0,3.2,0.1,5.3-2H7.7z" />
+                                                    </svg>
+                                                </div>
+                                                <div class="nk-file-name">
+                                                    <div class="nk-file-name-text">
+                                                        <span class="title">UI Design</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nk-file-actions">
+                                        <a href="#" class="btn btn-sm btn-icon btn-trigger"><em class="icon ni ni-chevron-right"></em></a>
+                                    </div>
+                                </div><!-- .nk-file -->
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .modal-body -->
+                <div class="modal-footer modal-footer-stretch  bg-light">
+                    <div class="modal-footer-between">
+                        <div class="g">
+                            <a href="#" class="link link-primary">Create New Folder</a>
+                        </div>
+                        <div class="g">
+                            <ul class="btn-toolbar g-3">
+                                <li><a href="#" data-bs-dismiss="modal" class="btn btn-outline-light btn-white">Cancel</a></li>
+                                <li><a href="#" class="btn btn-primary">Move</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .modal-footer -->
+            </div><!-- .modal-content -->
+        </div><!-- .modla-dialog -->
+    </div><!-- .modal -->
+    <!-- @@ File Details Modal @e -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="file-details">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header align-center">
+                    <div class="nk-file-title">
+                        <div class="nk-file-icon">
+                            <span class="nk-file-icon-type">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72 72">
+                                    <path fill="#6C87FE" d="M57.5,31h-23c-1.4,0-2.5-1.1-2.5-2.5v-10c0-1.4,1.1-2.5,2.5-2.5h23c1.4,0,2.5,1.1,2.5,2.5v10
+	C60,29.9,58.9,31,57.5,31z" />
+                                    <path fill="#8AA3FF" d="M59.8,61H12.2C8.8,61,6,58,6,54.4V17.6C6,14,8.8,11,12.2,11h18.5c1.7,0,3.3,1,4.1,2.6L38,24h21.8
+	c3.4,0,6.2,2.4,6.2,6v24.4C66,58,63.2,61,59.8,61z" />
+                                    <path display="none" fill="#8AA3FF" d="M62.1,61H9.9C7.8,61,6,59.2,6,57c0,0,0-31.5,0-42c0-2.2,1.8-4,3.9-4h19.3
+	c1.6,0,3.2,0.2,3.9,2.3l2.7,6.8c0.5,1.1,1.6,1.9,2.8,1.9h23.5c2.2,0,3.9,1.8,3.9,4v31C66,59.2,64.2,61,62.1,61z" />
+                                    <path fill="#798BFF" d="M7.7,59c2.2,2.4,4.7,2,6.3,2h45c1.1,0,3.2,0.1,5.3-2H7.7z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="nk-file-name">
+                            <div class="nk-file-name-text"><span class="title">UI/UX Design</span></div>
+                            <div class="nk-file-name-sub">Project</div>
+                        </div>
+                    </div>
+                    <a href="#" class="close" data-bs-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
+                </div>
+                <div class="modal-body">
+                    <div class="nk-file-details">
+                        <div class="nk-file-details-row">
+                            <div class="nk-file-details-col">Type</div>
+                            <div class="nk-file-details-col">Folder</div>
+                        </div>
+                        <div class="nk-file-details-row">
+                            <div class="nk-file-details-col">Size</div>
+                            <div class="nk-file-details-col">35.48 MB</div>
+                        </div>
+                        <div class="nk-file-details-row">
+                            <div class="nk-file-details-col">Location</div>
+                            <div class="nk-file-details-col">
+                                <ul class="breadcrumb breadcrumb-sm breadcrumb-alt breadcrumb-arrow">
+                                    <li class="breadcrumb-item">ThemeForest</li>
+                                    <li class="breadcrumb-item">Project</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="nk-file-details-row">
+                            <div class="nk-file-details-col">Owner</div>
+                            <div class="nk-file-details-col">Me</div>
+                        </div>
+                        <div class="nk-file-details-row">
+                            <div class="nk-file-details-col">Shared with</div>
+                            <div class="nk-file-details-col">
+                                <div class="user-avatar-group">
+                                    <div class="user-avatar xs">
+                                        <img src="./images/avatar/b-sm.jpg" alt="">
+                                    </div>
+                                    <div class="user-avatar xs bg-purple">
+                                        <span>IH</span>
+                                    </div>
+                                    <div class="user-avatar xs bg-pink">
+                                        <span>AB</span>
+                                    </div>
+                                    <div class="user-avatar xs bg-light">
+                                        <span>+2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nk-file-details-row">
+                            <div class="nk-file-details-col">Modified</div>
+                            <div class="nk-file-details-col">Feb 19, 2020 by Abu Bit Istiyak</div>
+                        </div>
+                        <div class="nk-file-details-row">
+                            <div class="nk-file-details-col">Opened</div>
+                            <div class="nk-file-details-col">Apr 23, 2020 by Me</div>
+                        </div>
+                        <div class="nk-file-details-row">
+                            <div class="nk-file-details-col">Created</div>
+                            <div class="nk-file-details-col">Feb 19, 2020</div>
+                        </div>
+                    </div>
+                </div><!-- .modal-body -->
+                <div class="modal-footer modal-footer-stretch bg-light">
+                    <div class="modal-footer-between">
+                        <div class="g">
+                            <a href="#" class="link link-primary">View All Activity</a>
+                        </div>
+                        <div class="g">
+                            <ul class="btn-toolbar g-3">
+                                <li><a href="#file-share" data-bs-toggle="modal" data-bs-dismiss="modal" class="btn btn-outline-light btn-white">Share</a></li>
+                                <li><a href="#" class="btn btn-primary file-dl-toast">Download</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .modal-footer -->
+            </div><!-- .modal-content -->
+        </div><!-- .modla-dialog -->
+    </div><!-- .modal -->
+    <!-- @@ File Upload Modal @e -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="file-upload">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <a href="#" class="close" data-bs-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
+                <div class="modal-body modal-body-md">
+                    <div class="nk-upload-form">
+                        <h5 class="title mb-3">Upload File</h5>
+                        <div class="upload-zone small bg-lighter">
+                            <div class="dz-message" data-dz-message>
+                                <span class="dz-message-text"><span>Drag and drop</span> file here or <span>browse</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nk-upload-list">
+                        <h6 class="title">Uploaded Files</h6>
+                        <div class="nk-upload-item">
+                            <div class="nk-upload-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+                                    <g>
+                                        <rect x="16" y="14" width="40" height="44" rx="6" ry="6" style="fill:#7e95c4" />
+                                        <rect x="32" y="17" width="8" height="2" rx="1" ry="1" style="fill:#fff" />
+                                        <rect x="32" y="22" width="8" height="2" rx="1" ry="1" style="fill:#fff" />
+                                        <rect x="32" y="27" width="8" height="2" rx="1" ry="1" style="fill:#fff" />
+                                        <rect x="32" y="32" width="8" height="2" rx="1" ry="1" style="fill:#fff" />
+                                        <rect x="32" y="37" width="8" height="2" rx="1" ry="1" style="fill:#fff" />
+                                        <path d="M35,14h2a0,0,0,0,1,0,0V43a1,1,0,0,1-1,1h0a1,1,0,0,1-1-1V14A0,0,0,0,1,35,14Z" style="fill:#fff" />
+                                        <path d="M38.0024,42H33.9976A1.9976,1.9976,0,0,0,32,43.9976v2.0047A1.9976,1.9976,0,0,0,33.9976,48h4.0047A1.9976,1.9976,0,0,0,40,46.0024V43.9976A1.9976,1.9976,0,0,0,38.0024,42Zm-.0053,4H34V44h4Z" style="fill:#fff" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="nk-upload-info">
+                                <div class="nk-upload-title"><span class="title">dashlite-latest-version.zip</span></div>
+                                <div class="nk-upload-size">25.49 MB</div>
+                            </div>
+                            <div class="nk-upload-action">
+                                <a href="#" class="btn btn-icon btn-trigger" data-bs-dismiss="modal"><em class="icon ni ni-trash"></em></a>
+                            </div>
+                        </div>
+                        <div class="nk-upload-item">
+                            <div class="nk-upload-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+                                    <g>
+                                        <path d="M50,61H22a6,6,0,0,1-6-6V22l9-11H50a6,6,0,0,1,6,6V55A6,6,0,0,1,50,61Z" style="fill:#599def" />
+                                        <path d="M25,20.556A1.444,1.444,0,0,1,23.556,22H16l9-11h0Z" style="fill:#c2e1ff" />
+                                        <rect x="27" y="31" width="18" height="2" rx="1" ry="1" style="fill:#fff" />
+                                        <rect x="27" y="36" width="18" height="2" rx="1" ry="1" style="fill:#fff" />
+                                        <rect x="27" y="41" width="18" height="2" rx="1" ry="1" style="fill:#fff" />
+                                        <rect x="27" y="46" width="12" height="2" rx="1" ry="1" style="fill:#fff" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="nk-upload-info">
+                                <div class="nk-upload-title"><span class="title">Update work history.docx</span> <span class="meta">70% Done</span></div>
+                                <div class="nk-upload-progress">
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar" data-progress="70"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nk-upload-action">
+                                <a href="#" class="btn btn-icon btn-trigger" data-bs-dismiss="modal"><em class="icon ni ni-trash"></em></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nk-modal-action justify-end">
+                        <ul class="btn-toolbar g-4 align-center">
+                            <li><a href="#" class="link link-primary">Cancel</a></li>
+                            <li><button class="btn btn-primary">Add Files</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- .modal-content -->
+        </div><!-- .modla-dialog -->
+    </div><!-- .modal -->
+    <!-- JavaScript -->
+    <script src="assets/js/bundle.js?ver=3.2.0"></script>
+    <script src="assets/js/scripts.js?ver=3.2.0"></script>
+    <script src="assets/js/apps/file-manager.js?ver=3.2.0"></script>
+</body>
+
+</html>
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>NextCloud</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
-    <meta content="coderthemes" name="author">
+  
 
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
-
-    <!-- App css -->
-    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Icons css -->
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Theme Config Js -->
-    <script src="assets/js/config.js"></script>
 </head>
 
 <body>
   <app-root></app-root>
    
 
-    <!-- Back to Top Button -->
-    <button data-toggle="back-to-top" class="fixed hidden h-10 w-10 items-center justify-center rounded-full z-10 bottom-20 end-14 p-2.5 bg-primary cursor-pointer shadow-lg text-white">
-        <i class="mgc_arrow_up_line text-lg"></i>
-    </button>
-
-    <!-- Theme Settings -->
-    <div>
-        <!-- Theme Setting Button -->
-        <div class="fixed end-0 bottom-20">
-            <button data-fc-type="offcanvas" data-fc-target="theme-customization" type="button" class="bg-white rounded-s-full shadow-lg p-2.5 ps-3 transition-all dark:bg-slate-800">
-                <span class="sr-only">Setting</span>
-                <span class="flex items-center justify-center animate-spin">
-                    <i class="mgc_settings_4_line text-2xl"></i>
-                </span>
-            </button>
-        </div>
     
-        <!-- Theme Settings Offcanvas -->
-        <div id="theme-customization" class="fc-offcanvas-open:translate-x-0 hidden translate-x-full rtl:-translate-x-full fixed inset-y-0 end-0
-             transition-all duration-300 transform max-w-sm w-full z-50 bg-white border-s border-gray-900/10 dark:bg-gray-800 dark:border-white/10" tabindex="-1">
-            <div class="h-16 flex items-center text-gray-800 dark:text-white border-b border-dashed border-gray-900/10 dark:border-white/10 px-6 gap-3">
-                <h5 class="text-base grow">Theme Settings</h5>
-                <button type="button" class="p-2" id="reset-layout"><i class="mgc_refresh_1_line text-xl"></i></button>
-                <button type="button" data-fc-dismiss><i class="mgc_close_line text-xl"></i></button>
-            </div>
-    
-            <div class="h-[calc(100vh-64px)]" data-simplebar>
-                <div class="divide-y divide-dashed divide-slate-900/10  dark:divide-white/10">
-                    <div class="p-6">
-                        <h5 class="font-semibold text-sm mb-3">Theme</h5>
-                        <div class="grid grid-cols-3 gap-2">
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-mode" id="layout-color-light" value="light">
-                                <label class="form-label rounded-md" for="layout-color-light">
-                                    <span class="flex items-center justify-center px-4 py-3">
-                                        <i class="mgc_sun_line text-2xl"></i>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Light </div>
-                            </div>
-    
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-mode" id="layout-color-dark" value="dark">
-                                <label class="form-label rounded-md" for="layout-color-dark">
-                                    <span class="flex items-center justify-center px-4 py-3">
-                                        <i class="mgc_moon_line text-2xl"></i>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Dark </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="p-6">
-                        <h5 class="font-semibold text-sm mb-3">Direction</h5>
-                        <div class="grid grid-cols-3 gap-2">
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="dir" id="direction-ltr" value="ltr">
-                                <label class="form-label rounded-md" for="direction-ltr">
-                                    <span class="flex items-center justify-center px-4 py-3">
-                                        <i class="mgc_align_left_line text-2xl"></i>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> LTR </div>
-                            </div>
-    
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="dir" id="direction-rtl" value="rtl">
-                                <label class="form-label rounded-md" for="direction-rtl">
-                                    <span class="flex items-center justify-center px-4 py-3">
-                                        <i class="mgc_align_right_line text-2xl"></i>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> RTL </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="p-6 2xl:block hidden">
-                        <h5 class="font-semibold text-sm mb-3">Content Width</h5>
-                        <div class="grid grid-cols-3 gap-2">
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-layout-width" id="layout-mode-default" value="default">
-                                <label class="form-label rounded-md" for="layout-mode-default">
-                                    <span class="flex items-center justify-center px-4 py-3">
-                                        <i class="mgc_fullscreen_2_line text-2xl rotate-45"></i>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Fluid </div>
-                            </div>
-    
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-layout-width" id="layout-mode-boxed" value="boxed">
-                                <label class="form-label rounded-md" for="layout-mode-boxed">
-                                    <span class="flex items-center justify-center px-4 py-3">
-                                        <i class="mgc_fullscreen_exit_2_line text-2xl rotate-45"></i>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Boxed </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="p-6">
-                        <h5 class="font-semibold text-sm mb-3">Sidenav View</h5>
-                        <div class="grid grid-cols-3 gap-3">
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-sidenav-view" id="sidenav-view-default" value="default">
-                                <label class="form-label rounded-md" for="sidenav-view-default">
-                                    <span class="flex h-16 overflow-hidden">
-                                        <span class="block w-8 bg-gray-100 dark:bg-gray-800">
-                                            <span class="mt-1.5 mx-1.5 block space-y-1">
-                                                <span class="h-1 block rounded-sm mb-2.5 bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="h-1 block rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="h-1 block rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="h-1 block rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="h-1 block rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="h-1 block rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                            </span>
-                                        </span>
-                                        <span class="flex flex-col flex-auto border-s border-gray-200 dark:border-gray-700">
-                                            <span class="h-3 bg-gray-100 dark:bg-gray-800">
-                                                <span class="flex items-center justify-end h-full mr-1.5">
-                                                    <span class="w-1 h-1 block ml-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ml-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ml-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                </span>
-                                            </span>
-                                            <span class="flex flex-auto border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900"></span>
-                                        </span>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Default </div>
-                            </div>
-    
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-sidenav-view" id="sidenav-view-hover" value="hover">
-                                <label class="form-label rounded-md" for="sidenav-view-hover">
-                                    <span class="flex h-16 overflow-hidden">
-                                        <span class="w-3 bg-gray-100 dark:bg-gray-800">
-                                            <span class="w-1.5 h-1.5 mt-1 mx-auto rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                            <span class="flex flex-col items-center w-full mt-1.5 space-y-1">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                            </span>
-                                        </span>
-                                        <span class="flex flex-col flex-auto border-s border-gray-200 dark:border-gray-700">
-                                            <span class="h-3 bg-gray-100 dark:bg-gray-800">
-                                                <span class="flex items-center justify-end h-full mr-1.5">
-                                                    <span class="w-1 h-1 block ml-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ml-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ml-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                </span>
-                                            </span>
-                                            <span class="flex flex-auto border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900"></span>
-                                        </span>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Hover </div>
-                            </div>
-    
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-sidenav-view" id="sidenav-view-hover-active" value="hover-active">
-                                <label class="form-label rounded-md" for="sidenav-view-hover-active">
-                                    <span class="flex h-16 overflow-hidden">
-                                        <span class="w-8 bg-gray-100 dark:bg-gray-800">
-                                            <span class="mt-1.5 mx-1.5 block space-y-1">
-                                                <span class="flex mb-2.5 gap-1">
-                                                    <span class="h-1 block w-full rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="h-1 block w-2 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                </span>
-                                                <span class="h-1 block rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="h-1 block rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="h-1 block rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="h-1 block rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="h-1 block rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                            </span>
-                                        </span>
-                                        <span class="flex flex-col flex-auto border-s border-gray-200 dark:border-gray-700">
-                                            <span class="h-3 bg-gray-100 dark:bg-gray-800">
-                                                <span class="flex items-center justify-end h-full mr-1.5">
-                                                    <span class="w-1 h-1 block ml-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ml-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ml-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                </span>
-                                            </span>
-                                            <span class="flex flex-auto border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900"></span>
-                                        </span>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Hover Active </div>
-                            </div>
-    
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-sidenav-view" id="sidenav-view-sm" value="sm">
-                                <label class="form-label rounded-md" for="sidenav-view-sm">
-                                    <span class="flex h-16 overflow-hidden">
-                                        <span class="w-3 bg-gray-100 dark:bg-gray-800">
-                                            <span class="w-1.5 h-1.5 mt-1 mx-auto rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                            <span class="flex flex-col items-center w-full mt-1.5 space-y-1">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                            </span>
-                                        </span>
-                                        <span class="flex flex-col flex-auto border-s border-gray-200 dark:border-gray-700">
-                                            <span class="h-3 bg-gray-100 dark:bg-gray-800">
-                                                <span class="flex items-center h-full mr-1.5">
-                                                    <span class="grow">
-                                                        <span class="w-1 h-1 block ml-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    </span>
-                                                    <span class="w-1 h-1 block ml-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ml-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ml-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                </span>
-                                            </span>
-                                            <span class="flex flex-auto border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900"></span>
-                                        </span>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Small </div>
-                            </div>
-    
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-sidenav-view" id="sidenav-view-md" value="md">
-                                <label class="form-label rounded-md" for="sidenav-view-md">
-                                    <span class="flex h-16 rounded-md overflow-hidden">
-                                        <span class="w-4 bg-gray-100 dark:bg-gray-800">
-                                            <span class="w-2 h-2 mt-2 mx-auto rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                            <span class="flex flex-col items-center w-full mt-2 space-y-1">
-                                                <span class="w-2 h-2 rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="w-2 h-2 rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                                <span class="w-2 h-2 rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                            </span>
-                                        </span>
-                                        <span class="flex flex-col flex-auto border-s border-gray-200 dark:border-gray-700">
-                                            <span class="h-3 bg-gray-100 dark:bg-gray-800">
-                                                <span class="flex items-center h-full mr-1.5">
-                                                    <span class="grow">
-                                                        <span class="w-1 h-1 block ml-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    </span>
-                                                    <span class="w-1 h-1 block ml-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ml-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ml-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                </span>
-                                            </span>
-                                            <span class="flex flex-auto border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900"></span>
-                                        </span>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Compact </div>
-                            </div>
-    
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-sidenav-view" id="sidenav-view-mobile" value="mobile">
-                                <label class="form-label rounded-md" for="sidenav-view-mobile">
-                                    <span class="flex h-16 overflow-hidden">
-                                        <span class="flex flex-col flex-auto">
-                                            <span class="h-3 bg-gray-100 dark:bg-gray-800">
-                                                <span class="flex items-center h-full mr-1.5">
-                                                    <span class="w-1.5 h-1.5  ms-1 rounded-sm bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ms-1  rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ms-auto rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ms-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ms-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ms-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                </span>
-                                            </span>
-                                            <span class="flex flex-auto border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900"></span>
-                                        </span>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Mobile </div>
-                            </div>
-    
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-sidenav-view" id="sidenav-view-hidden" value="hidden">
-                                <label class="form-label rounded-md" for="sidenav-view-hidden">
-                                    <span class="flex h-16 overflow-hidden">
-                                        <span class="flex flex-col flex-auto">
-                                            <span class="h-3 bg-gray-100 dark:bg-gray-800">
-                                                <span class="flex flex-auto items-center h-full me-1.5">
-                                                    <span class="w-1 h-1 block ms-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ms-auto rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ms-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ms-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                    <span class="w-1 h-1 block ms-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
-                                                </span>
-                                            </span>
-                                            <span class="flex flex-auto border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900"></span>
-                                        </span>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Hidden </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="p-6">
-                        <h5 class="font-semibold text-sm mb-3">Menu Color</h5>
-                        <div class="grid grid-cols-4 gap-2">
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-menu-color" id="menu-color-light" value="light">
-                                <label class="form-label rounded-md" for="menu-color-light">
-                                    <span class="flex items-center justify-center px-4 py-3 bg-gray-100 dark:bg-gray-900">
-                                        <span class="w-5 h-5 shadow-lg rounded-full bg-white"></span>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Light </div>
-                            </div>
-    
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-menu-color" id="menu-color-dark" value="dark">
-                                <label class="form-label rounded-md" for="menu-color-dark">
-                                    <span class="flex items-center justify-center px-4 py-3 bg-gray-100 dark:bg-gray-900">
-                                        <span class="w-5 h-5 shadow-lg rounded-full bg-dark"></span>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Dark </div>
-                            </div>
-    
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-menu-color" id="menu-color-brand" value="brand">
-                                <label class="form-label rounded-md" for="menu-color-brand">
-                                    <span class="flex items-center justify-center px-4 py-3 bg-gray-100 dark:bg-gray-900">
-                                        <span class="w-5 h-5 shadow-lg rounded-full bg-primary"></span>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Brand </div>
-                            </div>
-    
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-menu-color" id="menu-color-gradient" value="gradient">
-                                <label class="form-label rounded-md" for="menu-color-gradient">
-                                    <span class="flex items-center justify-center px-4 py-3 bg-gray-100 dark:bg-gray-900">
-                                        <span class="w-5 h-5 shadow-lg rounded-full" style="background: linear-gradient(135deg, #6379c3 0%, #546ee5 60%);"></span>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Gradient </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="p-6">
-                        <h5 class="font-semibold text-sm mb-3">Topbar Color</h5>
-                        <div class="grid grid-cols-4 gap-2">
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-topbar-color" id="topbar-color-light" value="light">
-                                <label class="form-label rounded-md" for="topbar-color-light">
-                                    <span class="flex items-center justify-center px-4 py-3 bg-gray-100 dark:bg-gray-900">
-                                        <span class="w-5 h-5 shadow-lg rounded-full bg-white"></span>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Light </div>
-                            </div>
-    
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-topbar-color" id="topbar-color-dark" value="dark">
-                                <label class="form-label rounded-md" for="topbar-color-dark">
-                                    <span class="flex items-center justify-center px-4 py-3 bg-gray-100 dark:bg-gray-900">
-                                        <span class="w-5 h-5 shadow-lg rounded-full bg-dark"></span>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Dark </div>
-                            </div>
-    
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-topbar-color" id="topbar-color-brand" value="brand">
-                                <label class="form-label rounded-md" for="topbar-color-brand">
-                                    <span class="flex items-center justify-center px-4 py-3 bg-gray-100 dark:bg-gray-900">
-                                        <span class="w-5 h-5 shadow-lg rounded-full bg-primary"></span>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Brand </div>
-                            </div>
-    
-                            <div class="card-radio">
-                                <input class="form-radio" type="radio" name="data-topbar-color" id="topbar-color-gradient" value="gradient">
-                                <label class="form-label rounded-md" for="topbar-color-gradient">
-                                    <span class="flex items-center justify-center px-4 py-3 bg-gray-100 dark:bg-gray-900">
-                                        <span class="w-5 h-5 shadow-lg rounded-full" style="background: linear-gradient(135deg, #6379c3 0%, #546ee5 60%);"></span>
-                                    </span>
-                                </label>
-                                <div class="mt-1 text-md font-medium text-center text-gray-600 dark:text-gray-300"> Gradient </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="p-6">
-                        <h5 class="font-semibold text-sm mb-3">Layout Position</h5>
-                        <div class="flex btn-radio">
-                            <input type="radio" class="form-radio hidden" name="data-layout-position" id="layout-position-fixed" value="fixed">
-                            <label class="btn rounded-e-none bg-gray-100 dark:bg-gray-700" for="layout-position-fixed">Fixed</label>
-                            <input type="radio" class="form-radio hidden" name="data-layout-position" id="layout-position-scrollable" value="scrollable">
-                            <label class="btn rounded-s-none bg-gray-100 dark:bg-gray-700" for="layout-position-scrollable">Scrollable</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Plugin Js -->
-    <script src="assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets/libs/feather-icons/feather.min.js"></script>
-    <!-- <script src="assets/libs/@frostui/tailwindcss/frostui.js"></script> -->
-
-    <!-- App Js -->
-    <script src="assets/js/app.js"></script>
 
 </body>
 
 </html>
-
+ -->
