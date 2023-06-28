@@ -1,0 +1,79 @@
+<div class="nk-files nk-files-view-group">
+    <div class="nk-files-group">
+        <h6 class="title">Folders</h6>
+        <div class="nk-files-list">
+            <div class="nk-file-item nk-file" *ngFor="let item of folder">
+                <div class="nk-file-info">
+                    <div class="nk-file-title">
+                        <div class="nk-file-icon">
+                            <span class="nk-file-icon-type">
+                                <app-image-svg tipo="folder"></app-image-svg>
+                            </span>
+                        </div>
+                        <div class="nk-file-name">
+                            <div class="nk-file-name-text">
+                                <a href="#" class="title">{{item.nombre}}</a>                                
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nk-file-desc">
+                        <li class="date">{{item.fecha_registro | date:'dd-MM-YYYY'}}</li>                        
+                        <li *ngIf="item.acceso.length>0" class="members">{{item.acceso.length}} miembros</li>
+                    </ul>
+                </div>
+                <div class="nk-file-actions">
+                 <app-menu-contextual></app-menu-contextual>
+                </div>
+            </div>         
+        </div>
+    </div>
+    <div class="nk-files-group">
+        <h6 class="title">Archivos</h6>
+        <div class="nk-files-list">
+            <div class="nk-file-item nk-file" *ngFor="let file of items">
+                <div class="nk-file-info">
+                    <div class="nk-file-title">
+                        <div class="nk-file-icon">
+                            <span class="nk-file-icon-type">
+                                <app-image-svg [tipo]="file.tipo"></app-image-svg>
+                            </span>
+                        </div>
+                        <div class="nk-file-name">
+                            <div class="nk-file-name-text">
+                                <a class="title">{{file.nombre}}</a>                                
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nk-file-desc">
+                        <li class="date">{{file.fecha_registro | date:'dd-MM-YYYY '}}</li>
+                        <li class="size">235 KB</li>
+                        <li class="members" *ngIf="file.acceso.length==1">1 Miembro </li>
+                        <li class="members" *ngIf="file.acceso.length>1">{{file.acceso.length}} Miembros </li>
+                    </ul>
+                </div>
+                <div class="nk-file-actions">
+                    <div class="dropdown">
+                        <a href="" class="dropdown-toggle btn btn-sm btn-icon btn-trigger"
+                            data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <ul class="link-list-plain no-bdr">
+                                <li><a href="#file-details" data-bs-toggle="modal"><em
+                                            class="icon ni ni-eye"></em><span>Details</span></a></li>
+                                <li><a href="#file-share" data-bs-toggle="modal"><em
+                                            class="icon ni ni-share"></em><span>Share</span></a></li>
+                                <li><a href="#file-copy" data-bs-toggle="modal"><em
+                                            class="icon ni ni-copy"></em><span>Copy</span></a></li>
+                                <li><a href="#file-move" data-bs-toggle="modal"><em
+                                            class="icon ni ni-forward-arrow"></em><span>Move</span></a></li>
+                                <li><a href="#" class="file-dl-toast"><em
+                                            class="icon ni ni-download"></em><span>Download</span></a></li>
+                                <li><a href="#"><em class="icon ni ni-pen"></em><span>Rename</span></a></li>
+                                <li><a href="#"><em class="icon ni ni-trash"></em><span>Delete</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div><!-- .nk-files -->

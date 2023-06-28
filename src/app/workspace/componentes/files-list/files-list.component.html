@@ -1,0 +1,44 @@
+  <div class="nk-files nk-files-view-list">
+            <div class="nk-files-head">
+                <div class="nk-file-item">
+                    <div class="nk-file-info">                        
+                        <div class="tb-head"></div>
+                    </div>
+                    <div class="nk-file-meta">
+               
+                    </div>
+                    <div class="nk-file-members">
+                        <div class="tb-head">Acceso</div>
+                    </div>
+                    <div class="nk-file-actions">                       
+                    </div>
+                </div>
+            </div><!-- .nk-files-head -->
+            <div class="nk-files-list">
+                <div class="nk-file-item nk-file" *ngFor="let item of items">
+                    <div class="nk-file-info">
+                        <div class="nk-file-title">                        
+                            <div class="nk-file-icon">
+                                <span class="nk-file-icon-type">
+                                  <app-image-svg [tipo]="item.tipo"></app-image-svg>
+                                </span>
+                            </div>
+                            <div class="nk-file-name">
+                                <div class="nk-file-name-text">
+                                    <a href="#" class="title">{{item.nombre}}</a>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nk-file-meta">
+                        <div class="tb-lead">{{item.fecha_registro | date:'dd-MM-YYYY hh:mm a'}}</div>
+                    </div>
+                    <div class="nk-file-members">
+                        <app-miembros [item]="item" ></app-miembros>                    
+                    </div>
+                    <div class="nk-file-actions">
+                        <app-menu-contextual></app-menu-contextual>                     
+                    </div>
+                </div>
+            </div>
+        </div><!-- .nk-files -->

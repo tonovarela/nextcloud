@@ -1,0 +1,14 @@
+<div >
+    <div *ngIf="miembros.length==0" class="tb-lead">Solo yo</div>
+    <div class="user-avatar-group">    
+        <div *ngFor="let miembro of miembros" class="user-avatar xs" [class]="miembro.color">
+            <span data-bs-toggle="tooltip" data-bs-placement="left"
+            [title]="miembro.nombre">{{miembro.iniciales}}</span>
+        </div>                            
+        <div class="user-avatar xs bg-light" *ngIf="resto>0">
+            <span>+{{resto}}</span>
+        </div>
+    </div>
+    <!-- <div class="tb-shared"><em class="ni ni-link" data-bs-toggle="tooltip" data-bs-placement="left"
+        title="People with the link can view"></em></div> -->
+</div>

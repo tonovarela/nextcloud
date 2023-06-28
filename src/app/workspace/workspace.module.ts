@@ -9,6 +9,11 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
 import { FilesComponent } from './pages/files/files.component';
 import { MenuHomeComponent } from './componentes/menu-home/menu-home.component';
 import { ImageSvgComponent } from './componentes/image-svg/image-svg.component';
+import { FilesListComponent } from './componentes/files-list/files-list.component';
+import { FilesGridComponent } from './componentes/files-grid/files-grid.component';
+import { FilesGroupComponent } from './componentes/files-group/files-group.component';
+import { MenuContextualComponent } from './componentes/menu-contextual/menu-contextual.component';
+import { MiembrosComponent } from './componentes/miembros/miembros.component';
 
 
 
@@ -20,7 +25,12 @@ import { ImageSvgComponent } from './componentes/image-svg/image-svg.component';
     CargarArchivosComponent,
     FilesComponent,
     MenuHomeComponent,
-    ImageSvgComponent,    
+    ImageSvgComponent,
+    FilesListComponent,
+    FilesGridComponent,
+    FilesGroupComponent,
+    MenuContextualComponent,
+    MiembrosComponent,    
   ],
   imports: [
     CommonModule,    

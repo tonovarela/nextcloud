@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TypeSVG } from '../../interfaces/types';
+
 
 @Component({
   selector: 'app-image-svg',

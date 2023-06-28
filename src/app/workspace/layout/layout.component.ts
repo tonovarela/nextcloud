@@ -9,10 +9,7 @@ import {  Component, OnInit } from '@angular/core';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
-  ngOnInit(): void {
-
-    
-    
+  ngOnInit(): void {      
     
   }
   ngAfterViewInit(): void {
