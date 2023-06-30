@@ -1,7 +1,9 @@
+
+
 <div class="mt-5">
-    <div class="card">
-        <div >
-            <ngx-dropzone (change)="onSelect($event)" [multiple]="true" [expandable]="true"
+    <div class="card">       
+        <div  >
+            <ngx-dropzone (change)="onSelect($event)" [multiple]="true" [expandable]="true" *ngIf="!isSendingFiles()"
                 [processDirectoryDrop]="true" class="dropzone">
                 <ngx-dropzone-label>
                     <div class=" small bg-lighter">
@@ -13,7 +15,7 @@
             </ngx-dropzone>  
             <div class="nk-upload-item" *ngFor="let f of files" >
                 <div class="nk-upload-icon">
-                    <app-image-svg></app-image-svg>
+                    <app-image-svg [tipo]="f.type"></app-image-svg>
                 </div>
                 <div class="nk-upload-info">
                     <div class="nk-upload-title"><span class="title">{{f.name}}</span>                                             
@@ -27,4 +29,15 @@
         </div>
        
     </div>
+</div>
+<div class="nk-modal-action justify-end">
+    <ul class="btn-toolbar g-4 align-center">
+        <li><a href="#" (click)="cerrarModal()"   class="link link-primary">Cancelar</a></li>        
+        <li><button  *ngIf="!isSendingFiles()" class="btn btn-primary" (click)="registrarArchivos()" [disabled]="files.length==0">Registrar archivos</button>
+            <button *ngIf="isSendingFiles()" class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                <span>Loading...</span>
+            </button>
+        </li>
+    </ul>
 </div>

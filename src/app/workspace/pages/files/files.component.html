@@ -29,7 +29,7 @@
                                     class="icon ni ni-plus"></em></a>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <ul class="link-list-opt no-bdr">
-                                    <li><a  data-bs-toggle="modal"><em
+                                    <li><a (click)="modalService.openUpload()"><em
                                                 class="icon ni ni-upload-cloud"></em><span>Subir archivo</span></a></li>                                    
                                     <li><a ><em class="icon ni ni-folder-plus"></em><span>Crear
                                                 Folder</span></a></li>
@@ -50,6 +50,8 @@
                     <button class="search-submit btn btn-icon"><em class="icon ni ni-search"></em></button>
                 </div>
             </div><!-- .search-wrap -->
+
+
             <div class="nk-block-head-content d-none d-lg-block">
                 <ul class="nk-block-tools g-3">
                     <li><a (click)="viewShow=1" class="nk-switch-icon" [class.active]="viewShow==1"><em
@@ -64,13 +66,13 @@
         </div>
     </div><!-- .nk-block-head -->
     <div class="nk-fmg-listing nk-block" *ngIf="viewShow==2">        
-        <app-files-grid [items]="items"></app-files-grid>
+        <app-files-grid [items]="items()"></app-files-grid>
     </div><!-- .nk-block -->
     <div class="nk-fmg-listing nk-block" *ngIf="viewShow==3">
-      <app-files-group  [items]="items"></app-files-group>
+      <app-files-group  [items]="items()"></app-files-group>
     </div><!-- .nk-block -->
     <div class="nk-fmg-listing nk-block" *ngIf="viewShow==1">
-      <app-files-list [items]="items"></app-files-list>
+      <app-files-list [items]="items()"></app-files-list>
     </div><!-- .nk-block -->
 
 

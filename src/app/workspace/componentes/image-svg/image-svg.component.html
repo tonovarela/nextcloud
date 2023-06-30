@@ -1,5 +1,5 @@
 
-<div  id="folder" *ngIf="typeSVG=='folder'">
+<div  id="folder" *ngIf="tipo=='folder'">
     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72 72">
         <path fill="#6C87FE" d="M57.5,31h-23c-1.4,0-2.5-1.1-2.5-2.5v-10c0-1.4,1.1-2.5,2.5-2.5h23c1.4,0,2.5,1.1,2.5,2.5v10
 C60,29.9,58.9,31,57.5,31z" />
@@ -10,7 +10,7 @@ c1.6,0,3.2,0.2,3.9,2.3l2.7,6.8c0.5,1.1,1.6,1.9,2.8,1.9h23.5c2.2,0,3.9,1.8,3.9,4v
         <path fill="#798BFF" d="M7.7,59c2.2,2.4,4.7,2,6.3,2h45c1.1,0,3.2,0.1,5.3-2H7.7z" />
     </svg>
 </div>
-<div class="excel" *ngIf="typeSVG=='excel'">
+<div class="excel" *ngIf="tipo=='excel'">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
                                             <path d="M50,61H22a6,6,0,0,1-6-6V22l9-11H50a6,6,0,0,1,6,6V55A6,6,0,0,1,50,61Z" style="fill:#36c684" />
                                             <path d="M25,20.556A1.444,1.444,0,0,1,23.556,22H16l9-11h0Z" style="fill:#95e5bd" />
@@ -18,7 +18,7 @@ c1.6,0,3.2,0.2,3.9,2.3l2.7,6.8c0.5,1.1,1.6,1.9,2.8,1.9h23.5c2.2,0,3.9,1.8,3.9,4v
                                         </svg>
 </div>
 
-<div class="zip" *ngIf="typeSVG=='zip'">
+<div class="zip" *ngIf="tipo=='zip'">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
         <g>
             <rect x="16" y="14" width="40" height="44" rx="6" ry="6" style="fill:#7e95c4" />
@@ -33,7 +33,7 @@ c1.6,0,3.2,0.2,3.9,2.3l2.7,6.8c0.5,1.1,1.6,1.9,2.8,1.9h23.5c2.2,0,3.9,1.8,3.9,4v
     </svg>
 </div>
 
-<div class="doc" *ngIf="typeSVG=='doc'">
+<div class="doc" *ngIf="tipo=='doc'">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
         <g>
             <path d="M50,61H22a6,6,0,0,1-6-6V22l9-11H50a6,6,0,0,1,6,6V55A6,6,0,0,1,50,61Z" style="fill:#599def" />
@@ -46,7 +46,7 @@ c1.6,0,3.2,0.2,3.9,2.3l2.7,6.8c0.5,1.1,1.6,1.9,2.8,1.9h23.5c2.2,0,3.9,1.8,3.9,4v
     </svg>
 </div>
 
-<div class="txt" *ngIf="typeSVG=='txt'">
+<div class="txt" *ngIf="tipo=='txt'">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
         <path d="M50,61H22a6,6,0,0,1-6-6V22l9-11H50a6,6,0,0,1,6,6V55A6,6,0,0,1,50,61Z" style="fill:#7e95c4" />
         <path d="M25,20.556A1.444,1.444,0,0,1,23.556,22H16l9-11h0Z" style="fill:#b7ccea" />
@@ -59,7 +59,7 @@ c1.6,0,3.2,0.2,3.9,2.3l2.7,6.8c0.5,1.1,1.6,1.9,2.8,1.9h23.5c2.2,0,3.9,1.8,3.9,4v
 </div>
 
 
-<div class="file" *ngIf="typeSVG=='file'">
+<div class="file" *ngIf="tipo=='file'">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
         <path d="M50,61H22a6,6,0,0,1-6-6V22l9-11H50a6,6,0,0,1,6,6V55A6,6,0,0,1,50,61Z" style="fill:#755de0" />
         <path d="M27.2223,43H44.7086s2.325-.2815.7357-1.897l-5.6034-5.4985s-1.5115-1.7913-3.3357.7933L33.56,40.4707a.6887.6887,0,0,1-1.0186.0486l-1.9-1.6393s-1.3291-1.5866-2.4758,0c-.6561.9079-2.0261,2.8489-2.0261,2.8489S25.4268,43,27.2223,43Z" style="fill:#fff" />
@@ -67,7 +67,7 @@ c1.6,0,3.2,0.2,3.9,2.3l2.7,6.8c0.5,1.1,1.6,1.9,2.8,1.9h23.5c2.2,0,3.9,1.8,3.9,4v
     </svg>
 </div>
 
-<div class="media" *ngIf="typeSVG=='media'">
+<div class="media" *ngIf="tipo=='media'">
     <span class="nk-file-icon-type">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
             <path d="M50,61H22a6,6,0,0,1-6-6V22l9-11H50a6,6,0,0,1,6,6V55A6,6,0,0,1,50,61Z" style="fill:#f74141" />

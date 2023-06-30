@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 
 @Component({
@@ -8,8 +8,43 @@ import { Component, Input } from '@angular/core';
 })
 
 
-export class ImageSvgComponent {
-
+export class ImageSvgComponent implements OnInit {
   @Input("tipo") typeSVG: string = "file"
+  tipo: string = "file";
+  ngOnInit(): void {
+    
+    if (this.typeSVG.search("excel") >-1) {
+      this.tipo = "excel";
+      return;
+    }
+
+    if (this.typeSVG.search("zip") > -1) {
+      this.tipo = "zip";
+      return;
+    }
+    if (this.typeSVG.search("doc") > -1) {
+      this.tipo = "doc";
+      return;
+    }
+
+    if (this.typeSVG.search("txt") > -1) {
+      this.tipo = "txt";
+      return;
+    }
+
+    if (this.typeSVG.search("image")> -1) {
+      this.tipo = "media";
+      return;
+    }
+
+    if (this.typeSVG.search("folder") >-1) {
+      this.tipo = "folder";
+      return;
+    }
+    this.tipo = "file";
+  }
+
+
+
 
 }

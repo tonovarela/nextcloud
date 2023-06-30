@@ -19,17 +19,16 @@
                                         <a href="#" class="btn btn-light" data-bs-toggle="dropdown"><em class="icon ni ni-plus"></em> <span>Crear</span></a>
                                         <div class="dropdown-menu dropdown-menu-end">
                                             <ul class="link-list-opt no-bdr">
-                                                <li><a href="#" (click)="openUpload()"><em class="icon ni ni-upload-cloud"></em><span>Subir archivo</span></a></li>                                                
+                                                <li><a href="#" (click)="modalService.openUpload()"><em class="icon ni ni-upload-cloud"></em><span>Subir archivo</span></a></li>                                                
                                                 <li><a href="#"><em class="icon ni ni-folder-plus"></em><span>Crear Folder</span></a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </li>
-                                <li><a href="#" (click)="openUpload()" class="btn btn-primary" ><em class="icon ni ni-upload-cloud"></em> <span>Subir Archivo</span></a></li>
+                                <li><a href="#" (click)="modalService.openUpload()" class="btn btn-primary" ><em class="icon ni ni-upload-cloud"></em> <span>Subir Archivo</span></a></li>
                             </ul>
                         </div>
                     </div>
-
                     <router-outlet></router-outlet>
                 </div><!-- .nk-fmg-body -->
             </div><!-- .nk-fmg -->
@@ -48,7 +47,7 @@
                     <div class="nk-file-title">
                         <div class="nk-file-icon">
                             <span class="nk-file-icon-type">                                
-                               <app-image-svg [tipo]="itemActive?.tipo ||  'txt'"></app-image-svg>
+                               <app-image-svg  *ngIf="itemActive" [tipo]="itemActive.tipo"></app-image-svg>
                             </span>
                         </div>
                         <div class="nk-file-name">
@@ -56,7 +55,7 @@
                             <div class="nk-file-name-sub">394.87 MB</div>
                         </div>
                     </div>
-                    <a href="#" class="close"   (click)="closeShare()"><em class="icon ni ni-cross-sm"></em></a>
+                    <a href="#" class="close"   (click)="modalService.closeShare()"><em class="icon ni ni-cross-sm"></em></a>
                 </div>
                 <div class="modal-body p-0">
                     <div class="nk-file-share-header">
@@ -80,7 +79,7 @@
                 </div><!-- .modal-body -->
                 <div class="modal-footer bg-light">
                     <ul class="btn-toolbar g-3">
-                        <li><a (click)="closeShare()" class="btn btn-outline-light btn-white">Cancelar</a></li>
+                        <li><a (click)="modalService.closeShare()" class="btn btn-outline-light btn-white">Cancelar</a></li>
                         <li><a  class="btn btn-primary">Compartir</a></li>
                     </ul>
                 </div><!-- .modal-footer -->
@@ -380,15 +379,15 @@
                 <div class="modal-header align-center">
                     <div class="nk-file-title">
                         <div class="nk-file-icon">
-                            <span class="nk-file-icon-type">
-                                <app-image-svg [tipo]="itemActive?.tipo || 'txt' "></app-image-svg>
+                            <span class="nk-file-icon-type"  *ngIf="itemActive">
+                                <app-image-svg  [tipo]="itemActive.tipo"></app-image-svg>
                             </span>
                         </div>
                         <div class="nk-file-name">
-                            <div class="nk-file-name-text"><span class="title">{{itemActive?.nombre}}</span></div>                              
+                            <div class="nk-file-name-text"><span class="title">{{itemActive?.nombre}}</span></div>                               
                         </div>
                     </div>
-                    <a href="#" (click)="closeDetails()" class="close" ><em class="icon ni ni-cross-sm"></em></a>
+                    <a href="#" (click)="modalService.closeDetails()" class="close" ><em class="icon ni ni-cross-sm"></em></a>
                 </div>
                 <div class="modal-body">
                     <div class="nk-file-details">
@@ -423,7 +422,7 @@
                         </div>
                         <div class="g">
                             <ul class="btn-toolbar g-3">
-                                <li><a  href="#" (click)="compartir()" class="btn btn-outline-light btn-white">Share</a></li>
+                                <li><a  href="#" (click)="modalService.openShare(itemActive!)" class="btn btn-outline-light btn-white">Share</a></li>
                                 <li><a href="#" class="btn btn-primary file-dl-toast">Download</a></li>
                             </ul>
                         </div>
@@ -436,15 +435,9 @@
     <div class="modal  fade" id="uploadView"  tabindex="-1" role="dialog"  data-bs-backdrop="static" data-bs-keyboard="false" >
         <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
-                <a href="#" class="close" (click)="closeUpload()"><em class="icon ni ni-cross-sm"></em></a>
+                <a href="#" class="close" (click)="modalService.closeUpload()"><em class="icon ni ni-cross-sm"></em></a>
                 <div class="modal-body modal-body-md">
-                    <app-upload-file></app-upload-file>                    
-                    <div class="nk-modal-action justify-end">
-                        <ul class="btn-toolbar g-4 align-center">
-                            <li><a href="#" (click)="closeUpload()" class="link link-primary">Cancel</a></li>
-                            <li><button class="btn btn-primary" disabled>Add Files</button></li>
-                        </ul>
-                    </div>
+                    <app-upload-file *ngIf="uploadModalisOpen()"></app-upload-file>                                       
                 </div>
             </div><!-- .modal-content -->
         </div><!-- .modla-dialog -->

@@ -13,13 +13,16 @@ export class MiembrosComponent implements OnInit {
   resto:number =0;   
    ngOnInit(): void {       
     const accesos = [...this.item?.acceso!] ;    
-    if (accesos.length > 3) {
-      this.resto = accesos.length - 3;
-      accesos.splice(3, accesos.length - 1);      
+    if (accesos.length > 5) {
+      this.resto = accesos.length - 5;
+      accesos.splice(5, accesos.length - 1);      
     };     
     this.miembros = accesos;
      
    }
+
+
+ 
 
    
    

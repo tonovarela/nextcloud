@@ -1,6 +1,7 @@
 import { Component, Input, inject } from '@angular/core';
 import { ModalService } from '../../services/modal.service';
 import { Item } from '../../interfaces/Item.interface';
+import { FilesService } from '../../services';
 
 @Component({
   selector: 'app-menu-contextual',
@@ -10,16 +11,19 @@ import { Item } from '../../interfaces/Item.interface';
 export class MenuContextualComponent {
   @Input("item") item!: Item;
   modalService = inject(ModalService);
+  filesService = inject(FilesService);
 
-  verModal(nombreModal: string) {
+  action(nombreModal: string) {
     switch (nombreModal) {
-      case "share":        
-        this.modalService.modalShare.set({ isOpen: true, file: this.item });
+      case "share":
+        this.modalService.openShare(this.item);
         break;
-      case "details":      
-        this.modalService.modalDetails.set({ isOpen: true, file: this.item });
+      case "details":
+        this.modalService.openDetails(this.item);
         break
-
+      case "delete":
+        this.filesService.eliminarItem(this.item.id);
+        break
       default:
         break;
     }
