@@ -1,0 +1,30 @@
+<div class="mt-5">
+    <div class="card">
+        <div >
+            <ngx-dropzone (change)="onSelect($event)" [multiple]="true" [expandable]="true"
+                [processDirectoryDrop]="true" class="dropzone">
+                <ngx-dropzone-label>
+                    <div class=" small bg-lighter">
+                        <div class="dz-message">                                                        
+                            <span class="dz-message-text"><span>Arrastra los archivos</span> aqui <span> o haz click para explorar</span></span>
+                        </div>
+                    </div>                    
+                </ngx-dropzone-label>                
+            </ngx-dropzone>  
+            <div class="nk-upload-item" *ngFor="let f of files" >
+                <div class="nk-upload-icon">
+                    <app-image-svg></app-image-svg>
+                </div>
+                <div class="nk-upload-info">
+                    <div class="nk-upload-title"><span class="title">{{f.name}}</span>                                             
+                    </div>
+                    <span class="text-muted text-sm">{{niceBytes(f.size)}}</span>                     
+                </div>
+                <div class="nk-upload-action">
+                    <a href="#" (click)="onRemove(f)" class="btn btn-icon btn-trigger" ><em class="icon ni ni-trash"></em></a>
+                </div>
+            </div>          
+        </div>
+       
+    </div>
+</div>

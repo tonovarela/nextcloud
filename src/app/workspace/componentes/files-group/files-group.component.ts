@@ -13,7 +13,7 @@ export class FilesGroupComponent implements OnInit {
 
   ngOnInit(): void {
      this.folder = this.items.filter(item => item.tipo === 'folder');
-     this.files = this.items.filter(item => item.tipo !== 'folder');
+     this.files = this.items.filter(item => item.tipo !== 'folder');     
   }
 
   

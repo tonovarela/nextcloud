@@ -7,15 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { CargarArchivosComponent } from './pages/cargar-archivos/cargar-archivos.component';
 import { NgxDropzoneModule } from 'ngx-dropzone';
 import { FilesComponent } from './pages/files/files.component';
-import { MenuHomeComponent } from './componentes/menu-home/menu-home.component';
-import { ImageSvgComponent } from './componentes/image-svg/image-svg.component';
-import { FilesListComponent } from './componentes/files-list/files-list.component';
-import { FilesGridComponent } from './componentes/files-grid/files-grid.component';
-import { FilesGroupComponent } from './componentes/files-group/files-group.component';
-import { MenuContextualComponent } from './componentes/menu-contextual/menu-contextual.component';
-import { MiembrosComponent } from './componentes/miembros/miembros.component';
-
-
+import { FilesGridComponent, FilesGroupComponent, FilesListComponent, ImageSvgComponent, MenuContextualComponent, MenuHomeComponent, MiembrosComponent, UploadFileComponent } from './componentes';
 
 
 @NgModule({
@@ -30,7 +22,8 @@ import { MiembrosComponent } from './componentes/miembros/miembros.component';
     FilesGridComponent,
     FilesGroupComponent,
     MenuContextualComponent,
-    MiembrosComponent,    
+    MiembrosComponent,
+    UploadFileComponent,    
   ],
   imports: [
     CommonModule,    

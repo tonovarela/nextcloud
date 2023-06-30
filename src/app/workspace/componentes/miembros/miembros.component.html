@@ -1,7 +1,7 @@
 <div >
     <div *ngIf="miembros.length==0" class="tb-lead">Solo yo</div>
     <div class="user-avatar-group">    
-        <div *ngFor="let miembro of miembros" class="user-avatar xs" [class]="miembro.color">
+        <div *ngFor="let miembro of miembros" class="user-avatar xs" [class]="miembro?.color">
             <span data-bs-toggle="tooltip" data-bs-placement="left"
             [title]="miembro.nombre">{{miembro.iniciales}}</span>
         </div>                            

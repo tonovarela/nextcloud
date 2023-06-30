@@ -10,6 +10,8 @@ export interface Item {
 export interface Avatar {
 id:string;
 nombre:string;
+color?:string;
+iniciales?:string
 }
 
 

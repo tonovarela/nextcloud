@@ -1,6 +1,4 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { PageAbstractComponent } from 'src/app/abstract/PageAbstractComponent';
-declare var feather: any
 @Component({
   selector: 'app-cargar-archivos',
   templateUrl: './cargar-archivos.component.html',
