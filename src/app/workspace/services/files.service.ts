@@ -12,8 +12,7 @@ export class FilesService {
 
   eliminarItem(id: string) {
     const items = this.items().filter(item => item.id!== id);
-    this.items.set(items);
-    console.log(this.items().length);
+    this.items.set([...items]);    
   }
   
 }
