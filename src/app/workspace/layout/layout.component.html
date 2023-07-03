@@ -39,53 +39,7 @@
 
  <!-- app-root @e -->
 
-    <!-- @@ Share File Modal @e -->
-    <div class="modal fade"  id="shareView" tabindex="-1" role="dialog"  data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog modal-md" role="document">
-            <div class="modal-content">
-                <div class="modal-header align-center">
-                    <div class="nk-file-title">
-                        <div class="nk-file-icon">
-                            <span class="nk-file-icon-type">                                
-                               <app-image-svg  *ngIf="itemActive" [tipo]="itemActive.tipo"></app-image-svg>
-                            </span>
-                        </div>
-                        <div class="nk-file-name">
-                            <div class="nk-file-name-text"><span class="title">{{itemActive?.nombre}}</span></div>
-                            <div class="nk-file-name-sub">394.87 MB</div>
-                        </div>
-                    </div>
-                    <a href="#" class="close"   (click)="modalService.closeShare()"><em class="icon ni ni-cross-sm"></em></a>
-                </div>
-                <div class="modal-body p-0">
-                    <div class="nk-file-share-header">
-                        <div class="nk-file-share-group">
-                            <div class="nk-file-share-input-group">
-                                <div class="nk-file-share-input nk-file-share-input-to">
-                                    <label class="label">Para</label>
-                                    <input type="text" class="input-mail tagify" placeholder="Nombre o correo electrónico" data-whitelist="team@softnio.com, help@softnio.com, contact@softnio.com">
-                                </div>
-                            </div>
-                            <ul class="nk-file-share-nav">
-                                <li><span class="badge badge-sm bg-outline-gray">Puede ver</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="nk-file-share-editor">
-                        <div class="nk-file-share-field">
-                            <textarea class="form-control form-control-simple no-resize ex-large" placeholder="Agregar un mensaje (opcional)"></textarea>
-                        </div>
-                    </div><!-- .nk-file-share-editor -->
-                </div><!-- .modal-body -->
-                <div class="modal-footer bg-light">
-                    <ul class="btn-toolbar g-3">
-                        <li><a (click)="modalService.closeShare()" class="btn btn-outline-light btn-white">Cancelar</a></li>
-                        <li><a  class="btn btn-primary">Compartir</a></li>
-                    </ul>
-                </div><!-- .modal-footer -->
-            </div><!-- .modal-content -->
-        </div><!-- .modla-dialog -->
-    </div><!-- .modal -->
+   
     <!-- @@ Copy File Modal @e -->
     <div class="modal fade"   tabindex="-1" role="dialog" id="file-copy"  data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-md" role="document">
@@ -372,73 +326,7 @@
             </div><!-- .modal-content -->
         </div><!-- .modla-dialog -->
     </div><!-- .modal -->
-    <!-- @@ File Details Modal @e -->
-    <div class="modal fade" id="detailsView" tabindex="-1" role="dialog"  data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog modal-md" role="document">
-            <div class="modal-content">
-                <div class="modal-header align-center">
-                    <div class="nk-file-title">
-                        <div class="nk-file-icon">
-                            <span class="nk-file-icon-type"  *ngIf="itemActive">
-                                <app-image-svg  [tipo]="itemActive.tipo"></app-image-svg>
-                            </span>
-                        </div>
-                        <div class="nk-file-name">
-                            <div class="nk-file-name-text"><span class="title">{{itemActive?.nombre}}</span></div>                               
-                        </div>
-                    </div>
-                    <a href="#" (click)="modalService.closeDetails()" class="close" ><em class="icon ni ni-cross-sm"></em></a>
-                </div>
-                <div class="modal-body">
-                    <div class="nk-file-details">
-                        <div class="nk-file-details-row">
-                            <div class="nk-file-details-col">Tipo</div>
-                            <div class="nk-file-details-col">{{itemActive?.tipo}}</div>
-                        </div>
-                        <div class="nk-file-details-row">
-                            <div class="nk-file-details-col">Tamaño</div>
-                            <div class="nk-file-details-col">35.48 MB</div>
-                        </div>                       
-                        <div class="nk-file-details-row">
-                            <div class="nk-file-details-col">Propietario</div>
-                            <div class="nk-file-details-col">Me</div>
-                        </div>
-                        <div class="nk-file-details-row">
-                            <div class="nk-file-details-col">Compartido con</div>
-                            <div class="nk-file-details-col">
-                                <app-miembros *ngIf="itemActive!=undefined" [item]="itemActive"></app-miembros>                                                            
-                            </div>
-                        </div>                        
-                        <div class="nk-file-details-row">
-                            <div class="nk-file-details-col">Creado</div>
-                            <div class="nk-file-details-col">{{itemActive?.fecha_registro | date:'dd-MM-YYYY hh:mm a'}}</div>
-                        </div>
-                    </div>
-                </div><!-- .modal-body -->
-                <div class="modal-footer modal-footer-stretch bg-light">
-                    <div class="modal-footer-between">
-                        <div class="g">
-                            <a href="#" class="link link-primary">View All Activity</a>
-                        </div>
-                        <div class="g">
-                            <ul class="btn-toolbar g-3">
-                                <li><a  href="#" (click)="modalService.openShare(itemActive!)" class="btn btn-outline-light btn-white">Share</a></li>
-                                <li><a href="#" class="btn btn-primary file-dl-toast">Download</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div><!-- .modal-footer -->
-            </div><!-- .modal-content -->
-        </div><!-- .modla-dialog -->
-    </div><!-- .modal -->
-    <!-- @@ File Upload Modal @e -->
-    <div class="modal  fade" id="uploadView"  tabindex="-1" role="dialog"  data-bs-backdrop="static" data-bs-keyboard="false" >
-        <div class="modal-dialog modal-xl" role="document">
-            <div class="modal-content">
-                <a href="#" class="close" (click)="modalService.closeUpload()"><em class="icon ni ni-cross-sm"></em></a>
-                <div class="modal-body modal-body-md">
-                    <app-upload-file *ngIf="uploadModalisOpen()"></app-upload-file>                                       
-                </div>
-            </div><!-- .modal-content -->
-        </div><!-- .modla-dialog -->
-    </div><!-- .modal -->
+
+    <app-share-modal></app-share-modal>
+    <app-details-modal></app-details-modal>
+    <app-upload-modal></app-upload-modal>

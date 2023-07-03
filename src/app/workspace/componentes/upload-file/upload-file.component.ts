@@ -12,11 +12,13 @@ declare var Swal:any;
 export class UploadFileComponent implements OnInit {
   modalService = inject(ModalService);
   filesService = inject(FilesService);
-  isSendingFiles = computed(() => this.modalService.modalUpload().sendingFiles)
+  isSendingFiles = computed(() => this.modalService.modalUpload().sendingFiles);
+  files: File[] = [];
+
   ngOnInit(): void {
     this.files = [];
   }
-  files: File[] = [];
+  
 
 
   onSelect(event: any) {

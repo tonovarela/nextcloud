@@ -1,0 +1,11 @@
+  <!-- @@ File Upload Modal @e -->
+  <div class="modal  fade" id="uploadView"  tabindex="-1" role="dialog"  data-bs-backdrop="static" data-bs-keyboard="false" >
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <a href="#" class="close" (click)="modalService.closeUpload()"><em class="icon ni ni-cross-sm"></em></a>
+            <div class="modal-body modal-body-md">
+                <app-upload-file *ngIf="uploadModalisOpen()"></app-upload-file>                                       
+            </div>
+        </div><!-- .modal-content -->
+    </div><!-- .modla-dialog -->
+</div><!-- .modal -->

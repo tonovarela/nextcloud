@@ -6,8 +6,7 @@ import { FilesComponent } from './pages/files/files.component';
 const routes: Routes = [{
   path: '', component: LayoutComponent,
   children: [    
-    { path: 'home', component: FilesComponent },  
-    { path: 'cargar-archivos' },  
+    { path: 'home', component: FilesComponent },      
     {path: '**', redirectTo: 'home'}
   ]
  }

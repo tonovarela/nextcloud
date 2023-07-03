@@ -1,0 +1,59 @@
+  <!-- @@ File Details Modal @e -->
+  <div class="modal fade" id="detailsView" tabindex="-1" role="dialog"  data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header align-center">
+                <div class="nk-file-title">
+                    <div class="nk-file-icon">
+                        <span class="nk-file-icon-type"  *ngIf="itemActive">
+                            <app-image-svg  [tipo]="itemActive.tipo"></app-image-svg>
+                        </span>
+                    </div>
+                    <div class="nk-file-name">
+                        <div class="nk-file-name-text"><span class="title">{{itemActive?.nombre}}</span></div>                               
+                    </div>
+                </div>
+                <a href="#" (click)="modalService.closeDetails()" class="close" ><em class="icon ni ni-cross-sm"></em></a>
+            </div>
+            <div class="modal-body">
+                <div class="nk-file-details">
+                    <div class="nk-file-details-row">
+                        <div class="nk-file-details-col">Tipo</div>
+                        <div class="nk-file-details-col">{{itemActive?.tipo}}</div>
+                    </div>
+                    <div class="nk-file-details-row">
+                        <div class="nk-file-details-col">Tamaño</div>
+                        <div class="nk-file-details-col">35.48 MB</div>
+                    </div>                       
+                    <div class="nk-file-details-row">
+                        <div class="nk-file-details-col">Propietario</div>
+                        <div class="nk-file-details-col">Me</div>
+                    </div>
+                    <div class="nk-file-details-row">
+                        <div class="nk-file-details-col">Compartido con</div>
+                        <div class="nk-file-details-col">
+                            <app-miembros *ngIf="itemActive!=undefined" [item]="itemActive"></app-miembros>                                                            
+                        </div>
+                    </div>                        
+                    <div class="nk-file-details-row">
+                        <div class="nk-file-details-col">Creado</div>
+                        <div class="nk-file-details-col">{{itemActive?.fecha_registro | date:'dd-MM-YYYY hh:mm a'}}</div>
+                    </div>
+                </div>
+            </div><!-- .modal-body -->
+            <div class="modal-footer modal-footer-stretch bg-light">
+                <div class="modal-footer-between">
+                    <div class="g">
+                        <a href="#" class="link link-primary">View All Activity</a>
+                    </div>
+                    <div class="g">
+                        <ul class="btn-toolbar g-3">
+                            <li><a  href="#" (click)="modalService.openShare(itemActive!)" class="btn btn-outline-light btn-white">Share</a></li>
+                            <li><a href="#" class="btn btn-primary file-dl-toast">Download</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- .modal-footer -->
+        </div><!-- .modal-content -->
+    </div><!-- .modla-dialog -->
+</div><!-- .modal -->
