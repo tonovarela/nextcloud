@@ -3,18 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { WorkspaceRoutingModule } from './workspace-routing.module';
 import { LayoutComponent } from './layout/layout.component';
-import { HomeComponent } from './pages/home/home.component';
-import { CargarArchivosComponent } from './pages/cargar-archivos/cargar-archivos.component';
+
+
 import { NgxDropzoneModule } from 'ngx-dropzone';
 import { FilesComponent } from './pages/files/files.component';
 import { FilesGridComponent, FilesGroupComponent, FilesListComponent, ImageSvgComponent, MenuContextualComponent, MenuHomeComponent, MiembrosComponent, UploadFileComponent } from './componentes';
+import { PipesModule } from '../pipes/pipes.module';
 
 
 @NgModule({
   declarations: [
-    LayoutComponent,
-    HomeComponent,
-    CargarArchivosComponent,
+    LayoutComponent,    
     FilesComponent,
     MenuHomeComponent,
     ImageSvgComponent,
@@ -28,7 +27,9 @@ import { FilesGridComponent, FilesGroupComponent, FilesListComponent, ImageSvgCo
   imports: [
     CommonModule,    
     NgxDropzoneModule,
-    WorkspaceRoutingModule
+    WorkspaceRoutingModule,
+    PipesModule
+
   ]
 })
 export class WorkspaceModule { }

@@ -40,14 +40,6 @@ export class UploadFileComponent implements OnInit {
     this.files.splice(this.files.indexOf(event), 1);
   }
 
-  niceBytes(x: number) {
-    const units = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-    let l = 0, n = parseInt(x.toString(), 10) || 0;
-    while (n >= 1024 && ++l) {
-      n = n / 1024;
-    }
-    return (n.toFixed(n < 10 && l > 0 ? 1 : 0) + ' ' + units[l]);
-  }
 
   cerrarModal() {
     if (this.isSendingFiles()) {
@@ -65,7 +57,7 @@ export class UploadFileComponent implements OnInit {
         const newItem: Item = { propietario: true, id: uuidv4(), nombre: f.name, tipo: f.type, fecha_registro: new Date(), acceso: [] };
         newItems.push(newItem);
       });
-      this.filesService.items.set([...items(), ...newItems]);
+      this.filesService.inicializarItems([...items(), ...newItems]);
       this.modalService.finishSendingFiles();      
     }, 3000);
   }

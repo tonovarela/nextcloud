@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, computed, signal } from '@angular/core';
 import { Item } from '../interfaces/Item.interface';
 
 @Injectable({
@@ -6,13 +6,23 @@ import { Item } from '../interfaces/Item.interface';
 })
 export class FilesService {
 
-  items = signal<Item[]>([]);
+  private _items = signal<Item[]>([]);
 
 
+
+
+  items = computed(() => this._items());
+
+  inicializarItems(items: Item[]) {
+    this._items.set(items);
+  }
 
   eliminarItem(id: string) {
-    const items = this.items().filter(item => item.id!== id);
-    this.items.set([...items]);    
+    const items = this._items().filter(item => item.id !== id);
+    this._items.set([...items]);
   }
+
+
   
+
 }

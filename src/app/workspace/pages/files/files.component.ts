@@ -28,7 +28,7 @@ export class FilesComponent implements OnInit{
     {propietario:false, id: uuidv4(), nombre: 'Macha.xlsx', tipo: "excel", fecha_registro: new Date(), acceso: [{ id: "7", nombre: "Gabriel" }] },
     {propietario:false, id: uuidv4(), nombre: 'Zobra.zip', tipo: "zip", fecha_registro: new Date(), acceso: [{ id: "8", nombre: "Maria" }] },
     {propietario:false, id: uuidv4(), nombre: 'Varela.txt', tipo: "txt", fecha_registro: new Date(), acceso: [{ id: "9", nombre: "Elizabeth" }] }]              
-    this.filesService.items.set(items);    
+    this.filesService.inicializarItems(items);
   }
 
 
