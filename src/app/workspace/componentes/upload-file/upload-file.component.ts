@@ -19,14 +19,11 @@ export class UploadFileComponent implements OnInit {
     this.files = [];
   }
   
-
-
   onSelect(event: any) {
     this.files.push(...event.addedFiles);
   }
 
   onRemove(event: any) {
-
     Swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
@@ -59,7 +56,7 @@ export class UploadFileComponent implements OnInit {
         const newItem: Item = { propietario: true, id: uuidv4(), nombre: f.name, tipo: f.type, fecha_registro: new Date(), acceso: [] };
         newItems.push(newItem);
       });
-      this.filesService.inicializarItems([...items(), ...newItems]);
+      this.filesService.setItems([...items(), ...newItems]);
       this.modalService.finishSendingFiles();      
     }, 3000);
   }

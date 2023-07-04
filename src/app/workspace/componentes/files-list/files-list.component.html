@@ -5,7 +5,7 @@
                         <div class="tb-head"></div>
                     </div>
                     <div class="nk-file-meta">
-               
+                        <div class="tb-head">Fecha registro</div>
                     </div>
                     <div class="nk-file-members">
                         <div class="tb-head">Acceso</div>
@@ -17,19 +17,8 @@
             <div class="nk-files-list">
                 <div class="nk-file-item nk-file" *ngFor="let item of items">
                     <div class="nk-file-info">
-                        <div class="nk-file-title">                        
-                            <div class="nk-file-icon">
-                                <span class="nk-file-icon-type">
-                                  <app-image-svg [tipo]="item.tipo"></app-image-svg>
-                                </span>
-                            </div>
-                            <div class="nk-file-name">
-                                <div class="nk-file-name-text">
-                                    <a href="#" class="title">{{item.nombre}}</a>                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <app-item-file [item]="item"></app-item-file>
+                    </div>                                     
                     <div class="nk-file-meta">
                         <div class="tb-lead">{{item.fecha_registro | date:'dd-MM-YYYY hh:mm a'}}</div>
                     </div>

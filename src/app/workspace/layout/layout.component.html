@@ -7,10 +7,10 @@
                    <app-menu-home></app-menu-home>
                 </div><!-- .nk-fmg-aside -->
                 <div class="nk-fmg-body">
-                    <div class="nk-fmg-body-head d-none d-lg-flex">
-                        <div class="nk-fmg-search">
-                            <em class="icon ni ni-search"></em>
-                            <input type="text" class="form-control border-transparent form-focus-none" placeholder="Buscar archivos o folders">
+                    <div class="nk-fmg-body-head d-none d-lg-flex">                        
+                        <div class="nk-fmg-search" >                            
+                                <em class="icon ni ni-search"></em>
+                                <input type="text"  class="form-control border-transparent form-focus-none" placeholder="Buscar archivos o folders">                            
                         </div>
                         <div class="nk-fmg-actions">
                             <ul class="nk-block-tools g-3">
@@ -19,13 +19,13 @@
                                         <a href="#" class="btn btn-light" data-bs-toggle="dropdown"><em class="icon ni ni-plus"></em> <span>Crear</span></a>
                                         <div class="dropdown-menu dropdown-menu-end">
                                             <ul class="link-list-opt no-bdr">
-                                                <li><a href="#" (click)="modalService.openUpload()"><em class="icon ni ni-upload-cloud"></em><span>Subir archivo</span></a></li>                                                
-                                                <li><a href="#"><em class="icon ni ni-folder-plus"></em><span>Crear Folder</span></a></li>
+                                                <li><a  (click)="modalService.openUpload()"><em class="icon ni ni-upload-cloud"></em><span>Subir archivo</span></a></li>                                                
+                                                <li><a  (click)="modalService.openCreateFolder()" ><em class="icon ni ni-folder-plus"></em><span>Crear Folder</span></a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </li>
-                                <li><a href="#" (click)="modalService.openUpload()" class="btn btn-primary" ><em class="icon ni ni-upload-cloud"></em> <span>Subir Archivo</span></a></li>
+                                <li><a  (click)="modalService.openUpload()" class="btn btn-primary" ><em class="icon ni ni-upload-cloud"></em> <span>Subir Archivo</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -327,6 +327,7 @@
         </div><!-- .modla-dialog -->
     </div><!-- .modal -->
 
+    <app-create-folder-modal></app-create-folder-modal>
     <app-share-modal></app-share-modal>
     <app-details-modal></app-details-modal>
     <app-upload-modal></app-upload-modal>

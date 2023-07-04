@@ -6,8 +6,8 @@
             </div>
             <div class="nk-block-head-content">
                 <ul class="nk-block-tools g-1">
-                    <li class="d-lg-none">
-
+                    <li class="d-lg-none" >
+                        
                         <a href="#" class="btn btn-trigger btn-icon search-toggle toggle-search"
                             data-target="search"><em class="icon ni ni-search"></em></a>
                     </li>
@@ -15,38 +15,35 @@
                         <div class="dropdown">
                             <a class="btn btn-trigger btn-icon" data-bs-toggle="dropdown"><em
                                     class="icon ni ni-view-grid3-wd"></em></a>
-                            <div class="dropdown-menu dropdown-menu-end">
+                            <!-- <div class="dropdown-menu dropdown-menu-end">
                                 <ul class="link-list-opt no-bdr">
-                                    <li><a (click)="viewShow=2"><em class="icon ni ni-view-grid3-wd"></em><span>Grid
-                                                View</span></a></li>
-                                    <li><a><em (click)="viewShow=3" class="icon ni ni-view-group-wd"></em><span>Group
-                                                View</span></a></li>
-                                    <li><a (click)="viewShow=1"><em class="icon ni ni-view-row-wd"></em><span>List
-                                                View</span></a></li>
+                                    <li><a (click)="viewShow=2"><em class="icon ni ni-view-grid3-wd"></em><span>Grid View</span></a></li>
+                                    <li><a><em (click)="viewShow=3" class="icon ni ni-view-group-wd"></em><span>Group View</span></a></li>
+                                    <li><a (click)="viewShow=1"><em class="icon ni ni-view-row-wd"></em><span>List View</span></a></li>
                                 </ul>
-                            </div>
+                            </div> -->
                         </div>
                     </li>
                     <li class="d-lg-none">
-                        <div class="dropdown">
+                        <!-- <div class="dropdown">
                             <a href="#" class="btn btn-trigger btn-icon" data-bs-toggle="dropdown"><em
                                     class="icon ni ni-plus"></em></a>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <ul class="link-list-opt no-bdr">
                                     <li><a (click)="modalService.openUpload()"><em
-                                                class="icon ni ni-upload-cloud"></em><span>Subir archivo</span></a></li>
-                                    <li><a><em class="icon ni ni-folder-plus"></em><span>Crear
+                                                class="icon ni ni-upload-cloud"></em><span>Subir archivo</span></a></li>                                    
+                                    <li><a ><em class="icon ni ni-folder-plus"></em><span>Crear
                                                 Folder</span></a></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
                     </li>
                     <li class="d-lg-none me-n1"><a href="#" class="btn btn-trigger btn-icon toggle"
                             data-target="files-aside"><em class="icon ni ni-menu-alt-r"></em></a></li>
                 </ul>
             </div>
-            <div class="search-wrap px-2 d-lg-none" data-search="search">
-
+            <div class="search-wrap px-2 d-lg-none" data-search="search" >
+                
                 <div class="search-content">
                     <a href="#" class="search-back btn btn-icon toggle-search" data-target="search"><em
                             class="icon ni ni-arrow-left"></em></a>
@@ -57,33 +54,17 @@
             </div><!-- .search-wrap -->
 
 
-            <div class="nk-block-head-content d-none d-lg-block">
+            <!-- <div class="nk-block-head-content d-none d-lg-block">
                 <ul class="nk-block-tools g-3">
                     <li><a (click)="viewShow=1" class="nk-switch-icon" [class.active]="viewShow==1"><em
                                 class="icon ni ni-view-row-wd"></em></a></li>
-                    <li><a (click)="viewShow=2" class="nk-switch-icon" [class.active]="viewShow==2"><em
-                                class="icon ni ni-view-grid3-wd"></em></a></li>
+                                <li><a (click)="viewShow=2" class="nk-switch-icon" [class.active]="viewShow==2"><em
+                                    class="icon ni ni-view-grid3-wd"></em></a></li>
                     <li><a (click)="viewShow=3" class="nk-switch-icon" [class.active]="viewShow==3"><em
                                 class="icon ni ni-view-group-wd"></em></a></li>
 
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div><!-- .nk-block-head -->
-    <div *ngIf="items().length>0">
-        <div class="nk-fmg-listing nk-block" *ngIf="viewShow==2">
-            <app-files-grid [items]="items()"></app-files-grid>
-        </div><!-- .nk-block -->
-        <div class="nk-fmg-listing nk-block" *ngIf="viewShow==3">
-            <app-files-group [items]="items()"></app-files-group>
-        </div><!-- .nk-block -->
-        <div class="nk-fmg-listing nk-block" *ngIf="viewShow==1">
-            <app-files-list [items]="items()"></app-files-list>
-        </div><!-- .nk-block -->
-
-    </div>
-
-
-
-
-</div><!-- .nk-fmg-body-content -->
+</div>

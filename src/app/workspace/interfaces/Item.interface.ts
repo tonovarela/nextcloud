@@ -5,6 +5,7 @@ export interface Item {
     propietario: boolean;
     fecha_registro: Date;
     acceso: Avatar[];
+    children?:Item[]
 }
 
 export interface Avatar {

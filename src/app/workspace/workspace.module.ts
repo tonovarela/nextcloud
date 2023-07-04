@@ -1,14 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WorkspaceRoutingModule } from './workspace-routing.module';
-import { LayoutComponent } from './layout/layout.component';
 import { NgxDropzoneModule } from 'ngx-dropzone';
-import { FilesComponent } from './pages/files/files.component';
 
+
+
+import { FilesComponent } from './pages/files/files.component';
+import { LayoutComponent } from './layout/layout.component';
 
 import { FilesGridComponent, FilesGroupComponent, FilesListComponent, ImageSvgComponent, MenuContextualComponent, MenuHomeComponent, MiembrosComponent, UploadFileComponent } from './componentes';
 import { DetailsModalComponent, ShareModalComponent, UploadModalComponent } from './componentes/modals';
 import { PipesModule } from '../pipes/pipes.module';
+import { CreateFolderModalComponent } from './componentes/modals/create-folder-modal/create-folder-modal.component';
+import { FormsModule } from '@angular/forms';
+import { FolderComponent } from './pages/folder/folder.component';
+import { ItemFileComponent } from './componentes/item-file/item-file.component';
 
 
 
@@ -27,14 +33,18 @@ import { PipesModule } from '../pipes/pipes.module';
     UploadFileComponent,    
     UploadModalComponent,
     DetailsModalComponent,
-    ShareModalComponent,    
+    ShareModalComponent,
+    CreateFolderModalComponent,
+    FolderComponent,
+    ItemFileComponent,    
   ],
   imports: [
     CommonModule,    
+    FormsModule,
     NgxDropzoneModule,
     WorkspaceRoutingModule,
     PipesModule
-
-  ]
+  ],
+  
 })
 export class WorkspaceModule { }

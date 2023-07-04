@@ -8,12 +8,23 @@ export class ModalService {
   private _modalShare = signal<StateModal>({ isOpen: false, file: undefined });
   private _modalDetails = signal<StateModal>({ isOpen: false, file: undefined });
   private _modalUpload = signal<StateModalUpload>({ isOpen: false, sendingFiles: false, files: [] });
+  private _modalCreateFolder = signal<StateModal>({ isOpen: false, file: undefined });
 
 
   public modalShare = computed(() => this._modalShare());
   public modalDetails = computed(() => this._modalDetails());
   public modalUpload = computed(() => this._modalUpload());
+  public modalCreateFolder = computed(() => this._modalCreateFolder());
 
+
+
+  openCreateFolder() {
+    this._modalCreateFolder.mutate((current) => current.isOpen = true);
+  }
+
+  closeCreateFolder() {
+    this._modalCreateFolder.mutate((current) => current.isOpen = false);
+  }
 
 
   openDetails(item: Item) {
@@ -24,7 +35,7 @@ export class ModalService {
   closeDetails() {
     this._modalDetails.set({ isOpen: false, file: undefined });
   }
-  
+
   closeUpload() {
     const { sendingFiles } = this._modalUpload();
     if (sendingFiles) {

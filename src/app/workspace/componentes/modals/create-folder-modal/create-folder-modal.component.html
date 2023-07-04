@@ -1,0 +1,45 @@
+<div class="modal fade" id="createFolder" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header align-center">
+                <div class="nk-file-title">
+                    <div class="nk-file-icon">
+                        <span class="nk-file-icon-type" >
+                            <app-image-svg  tipo="folder"></app-image-svg>
+                        </span>
+                    </div>
+                    <div class="nk-file-name">
+                        <div class="nk-file-name-text"><span class="title"></span></div>                               
+                    </div>
+                </div>
+                <a href="#" (click)="modalService.closeCreateFolder()" class="close" ><em class="icon ni ni-cross-sm"></em></a>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">                            
+                            <div class="form-control-wrap">
+                                <input type="text" class="form-control"  [(ngModel)]="nombreFolder" autocomplete="off" id="nombre" placeholder="Nombre de la carpeta">
+                            </div>
+                            <div class="alert alert-danger alert-icon mt-2" *ngIf="containsSpecialChars()">
+                                <em class="icon ni ni-cross-circle"></em> <strong> No se permiten uso de caracteres especiales</strong>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer modal-footer-stretch bg-light">
+                <div class="modal-footer-between">
+                    <div class="g">                        
+                    </div>
+                    <div class="g">
+                        <ul class="btn-toolbar g-3">
+                            <li><a  href="#"  (click)="modalService.closeCreateFolder()" class="btn btn-outline-light btn-white">Cancelar</a></li>
+                            <li><button class="btn btn-primary file-dl-toast" (click)="crearFolder()" [disabled]="!folderValido">Crear</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- .modal-footer -->
+        </div>
+    </div>
+</div>
