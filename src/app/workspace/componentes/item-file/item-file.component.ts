@@ -14,8 +14,8 @@ export class ItemFileComponent {
   router=inject(Router)
 
   irDetalleItem() {
-    if (this.item.tipo == "folder") {
-     this.router.navigateByUrl("/workspace/folder/" + this.item.id);
+    if (this.item.tipo == "folder") {      
+     this.router.navigateByUrl("/workspace/folder/" + this.item.id_item);
      return;
     }
 

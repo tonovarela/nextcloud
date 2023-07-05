@@ -1,9 +1,8 @@
 import { Component, OnInit, inject, computed } from '@angular/core';
-import { v4 as uuidv4 } from 'uuid';
-import { ModalService,FilesService } from '../../services';
-
-import { Item } from '../../interfaces/Item.interface';
-declare var Swal:any;
+import { ModalService, FilesService } from '../../services';
+import {Observer } from 'rxjs';
+import { ResponseItemWorkspace } from '../../interfaces/responseAPI';
+declare var Swal: any;
 @Component({
   selector: 'app-upload-file',
   templateUrl: './upload-file.component.html',
@@ -18,7 +17,7 @@ export class UploadFileComponent implements OnInit {
   ngOnInit(): void {
     this.files = [];
   }
-  
+
   onSelect(event: any) {
     this.files.push(...event.addedFiles);
   }
@@ -30,7 +29,7 @@ export class UploadFileComponent implements OnInit {
       icon: 'warning',
       showCancelButton: true,
       confirmButtonText: 'Yes, delete it!'
-    }).then((result:any) => {
+    }).then((result: any) => {
       console.log(result);
     });;
     if (this.isSendingFiles()) {
@@ -44,21 +43,25 @@ export class UploadFileComponent implements OnInit {
     if (this.isSendingFiles()) {
       return;
     }
-    this.modalService.closeUpload();    
+    this.modalService.closeUpload();
   }
 
   registrarArchivos() {
-    this.modalService.initSendingFiles(this.files);    
-    setTimeout(() => {
-      const { items } = this.filesService;
-      const newItems: Item[] = [];
-      this.files.forEach(f => {
-        const newItem: Item = { propietario: true, id: uuidv4(), nombre: f.name, tipo: f.type, fecha_registro: new Date(), acceso: [] };
-        newItems.push(newItem);
-      });
-      this.filesService.setItems([...items(), ...newItems]);
-      this.modalService.finishSendingFiles();      
-    }, 3000);
+    this.modalService.initSendingFiles(this.files);        
+    const observer:Observer<ResponseItemWorkspace>={
+      next: (_) => {      
+      },
+      error: (error: any) => {
+      
+        this.modalService.finishSendingFiles();
+      },
+      complete: () => {        
+        this.modalService.finishSendingFiles();
+        this.filesService.cargarInformacion();
+      }          
+    }
+     this.filesService.registrarArchivo(this.files).subscribe(observer);
+  
   }
 
 

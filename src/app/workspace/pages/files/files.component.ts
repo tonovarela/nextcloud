@@ -5,39 +5,34 @@ import { ActivatedRoute } from '@angular/router';
 
 
 
+
 @Component({
   selector: 'app-files',
   templateUrl: './files.component.html',
   styleUrls: ['./files.component.scss']
 })
-export class FilesComponent implements OnInit{  
-  public viewShow = 1;  
-  
-  private filesService  =inject(FilesService);
-  public modalService=  inject(ModalService);
+export class FilesComponent implements OnInit {
+  public viewShow = 1;
 
-  
-  activatedRoute= inject(ActivatedRoute);
+  private filesService = inject(FilesService);
+  public modalService = inject(ModalService);
 
-  items = computed(()=>{    
-      const items= this.filesService.items();
-      return agregarPropiedades([...items]);        
+
+  activatedRoute = inject(ActivatedRoute);
+
+  items = computed(() => {
+    const items = this.filesService.items();
+    return agregarPropiedades([...items]);
   })
 
-  ngOnInit(): void {     
-    this.activatedRoute.params.subscribe(({id})=>{
-      if (id==undefined){
-        this.filesService.cargarInformacion();
-      }else{
-        const [item]= this.filesService.items().filter(f=>f.id==id);
-        if (item!=undefined){          
-          this.filesService.setItems([...item.children! || []  ]);
-        }
+  ngOnInit(): void {
+    this.activatedRoute.params.subscribe(({ id }) => {      
+      id = id == undefined ? '0' :id;
+      this.filesService.id_parent=id;
+      this.filesService.cargarInformacion();
+    });
 
-        
-      }
-      
-    })
+
   }
 
 

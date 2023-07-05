@@ -1,11 +1,10 @@
 export interface Item {
-    id: string;
+    id_item: string;
     tipo: string;
     nombre: string;
     propietario: boolean;
     fecha_registro: Date;
-    acceso: Avatar[];
-    children?:Item[]
+    acceso: Avatar[];    
 }
 
 export interface Avatar {

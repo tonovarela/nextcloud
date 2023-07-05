@@ -22,7 +22,7 @@ export class MenuContextualComponent {
         this.modalService.openDetails(this.item);
         break
       case "delete":
-        this.filesService.eliminarItem(this.item.id);
+        this.filesService.eliminarItem(this.item.id_item);
         break
       default:
         break;
